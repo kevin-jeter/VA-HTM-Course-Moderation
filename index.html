@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTM150: Nuvolo for Technicians – Labs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #005ea2;
+      --accent: #cce5ff;
+      --gray-border: #dee2e6;
+    }
+
+    body.light {
+      --bg-light: #ffffff;
+      --text-dark: #000000;
+      --card-bg: #ffffff;
+      --header-bg: var(--primary);
+      --input-bg: #f4f4f4;
+      --table-head-bg: #f0f0f0;
+      --table-alt-row-bg: #f9f9f9;
+      --image-border: #808080;
+      --gray-border: #adb5bd;
+    }
+
+    body.dark {
+      --bg-light: #1c1e21;
+      --text-dark: #e9ecef;
+      --card-bg: #2c2f33;
+      --header-bg: #003d7a;
+      --input-bg: #333840;
+      --table-head-bg: #3a3d41;
+      --table-alt-row-bg: #2a2d31;
+      --image-border: #444;
+      h1, h2, h3 {
+        color: var(--accent);
+      }
+      .callout {
+        border-left-color: var(--accent);
+      }
+      .theme-switch input:checked + .slider {
+        background-color: var(--accent);
+      }
+      input::placeholder,
+      select::placeholder {
+        color: #cccccc;
+      }
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 12pt;
+      line-height: 1.5;
+      background: var(--bg-light);
+      padding: 20px;
+      color: var(--text-dark);
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    h1, h2, h3 { color: var(--primary); margin-bottom: 10px; }
+    h1 { font-size: 24pt; }
+    h2 { font-size: 18pt; }
+    h3 { font-size: 14pt; }
+
+    .header, .footer {
+      background-color: var(--header-bg);
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      border-radius: 8px;
+      margin-bottom: 24px;
+      transition: background-color 0.3s ease;
+    }
+    .header h1 {
+       margin: 0;
+      color: white;
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 10px;
+      border-radius: 0;
+      box-shadow: none;
+      margin-bottom: 10px;
+      transition: none;
+    }
+    .card:hover { box-shadow: none; transform: none; }
+
+    .lab-section {
+      display: none;
+      background: var(--card-bg);
+      border-left: none;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 10px;
+      margin-bottom: 10px;
+      animation: none;
+      transition: none;
+    }
+    .lab-section.active { display: block; }
+
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+    .styled-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 12pt; background-color: var(--card-bg); color: var(--text-dark); }
+    .styled-table th, .styled-table td { border: 1px solid var(--gray-border); padding: 10px; vertical-align: top; text-align: left; }
+    .styled-table thead th { background-color: var(--table-head-bg); }
+    .styled-table tbody tr:nth-child(even) { background-color: var(--table-alt-row-bg); }
+
+    img { display: block; margin-top: 10px; max-width: 40%; height: auto; border: 1px solid var(--image-border); border-radius: 4px; }
+
+    .filter-bar { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+
+    .theme-switch { display: flex; align-items: center; gap: 10px; cursor: pointer; user-select: none; }
+    .theme-switch input { display: none; }
+    .theme-switch .slider { width: 40px; height: 20px; background-color: #ccc; border-radius: 20px; position: relative; transition: background-color 0.3s ease; }
+    .theme-switch .slider::before { content: ""; position: absolute; width: 16px; height: 16px; top: 2px; left: 2px; background-color: white; border-radius: 50%; transition: transform 0.3s ease; }
+    .theme-switch input:checked + .slider { background-color: var(--primary); }
+    .theme-switch input:checked + .slider::before { transform: translateX(20px); }
+    .switch-label { font-size: 0.9rem; color: var(--text-dark); }
+
+    .toggle-button { background-color: var(--primary); color: white; border: none; padding: 8px 12px; border-radius: 4px; font-size: 0.95rem; cursor: pointer; margin: 10px 0; transition: background-color 0.3s ease; }
+    .toggle-button:hover { background-color: #003d7a; }
+
+    .callout { border-left: 4px solid var(--primary); background: var(--table-alt-row-bg); padding: 10px 12px; border-radius: 6px; margin: 10px 0; }
+
+    .container { max-width: none; margin: 0; }
+
+        input[type="text"],
+    select {
+      background-color: var(--input-bg);
+      color: var(--text-dark);
+      border: 1px solid var(--gray-border);
+      padding: 8px;
+      border-radius: 4px;
+      box-sizing: border-box;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+  </style>
+</head>
+<body class="light">
+  <header class="header">
+    <h1>Moderator Guide</h1>
+  </header>
+
+  <section class="card filter-bar">
+    <div>
+      <strong>Select Lab:</strong>
+      <select id="labFilter" onchange="filterLabs()">
+        <option value="">----Select----</option>
+        <option value="User Guide">User Guide</option>
+        <option value="Moderator Checklist">Moderator Checklist</option>
+        <option value="Quiz and Software Resources">Quiz and Software Resources</option>
+        <option value="HTM PS101: Patient Safety Fundamentals">HTM PS101: Patient Safety Fundamentals</option>
+        <option value="HTM111: Introduction to HTM Cybersecurity">HTM111: Introduction to HTM Cybersecurity</option>
+        <option value="HTM112: Basic Networking Course">HTM112: Basic Networking Course</option>
+        <option value="HTM114: Microsoft Power Platform Fundamentals">HTM114: Microsoft Power Platform Fundamentals</option>
+        <option value="HTM115: Introduction to Windows Server Management">HTM115: Introduction to Windows Server Management</option>
+        <option value="HTM116: SQL Server Fundamentals">HTM116: SQL Server Fundamentals</option>
+        <option value="HTM117: PowerShell Fundamentals">HTM117: PowerShell Fundamentals</option>
+        <option value="HTM130: Productivity & Communication Fundamentals">HTM130: Productivity & Communication Fundamentals</option>
+        <option value="HTM PS201: Intermediate Patient Safety">HTM PS201: Intermediate Patient Safety</option>
+        <option value="HTM211: Introduction to Operating Systems & SQL">HTM211: Introduction to Operating Systems & SQL</option>
+        <option value="HTM212: Intermediate Networking">HTM212: Intermediate Networking</option>
+        <option value="HTM213: Introduction to Virtual Machines">HTM213: Introduction to Virtual Machines</option>
+        <option value="HTM214: Intermediate Principles of HTM Cybersecurity">HTM214: Intermediate Principles of HTM Cybersecurity</option>
+        <option value="HTM230: Team Communications and Conflict Resolution">HTM230: Team Communications and Conflict Resolution</option>
+        <option value="HTM250: Project Management Fundamentals">HTM250: Project Management Fundamentals</option>
+        <option value="HTM251: Agile Project Management">HTM251: Agile Project Management</option>
+        <option value="HTM301: Certified Biomedical Equipment Technician (CBET)">HTM301: Certified Biomedical Equipment Technician (CBET)</option>
+        <option value="HTM302: Certified Radiology Equipment Specialist (CRES)">HTM302: Certified Radiology Equipment Specialist (CRES)</option>
+        <option value="HTM311: DICOM Fundamentals">HTM311: DICOM Fundamentals</option>
+        <option value="HTM312: Introduction to HL7">HTM312: Introduction to HL7</option>
+        <option value="HTM330: Train the Trainer">HTM330: Train the Trainer</option>
+        <option value="HTM401: Certified Healthcare Technology Manager (CHTM)">HTM401: Certified Healthcare Technology Manager (CHTM)</option>
+        <option value="HTM402: Certification in Clinical Engineering (CCE)">HTM402: Certification in Clinical Engineering (CCE)</option>
+        <option value="HTM403: HTM Leadership Development">HTM403: HTM Leadership Development</option>
+      </select>
+    </div>
+
+    <label class="theme-switch">
+      <input type="checkbox" id="theme-toggle">
+      <span class="slider"></span>
+      <span class="switch-label">Dark Mode</span>
+    </label>
+  </section>
+
+  <main class="container">
+    <section class="lab-section active" data-lab="User Guide">
+      <h2>User Guide</h2>
+      <p>Welcome to the HTM Moderator Guide. This guide is designed to provide links, resources, and instructions to help you effectively moderate all HTM Courses.</p>
+      <p>As a moderator, you will have access to various tools and resources to assist you in your role. Please refer to the sections below for detailed information on each lab and its associated resources.</p>
+    </section>
+
+    ```html
+  <section class="lab-section" id="Moderator-Checklist">
+    <h2>Moderator Checklist</h2>
+    <h3>Basic Structure</h3>
+    <p>A comprehensive checklist for moderators to ensure all aspects of the class are covered, including preparation, during-class activities, and post-class follow-up.</p>
+    <h3>Resources Required</h3>
+    <ul>
+      <li>Email access</li>
+      <li>Computer and internet connection</li>
+      <li>Printing facilities</li>
+      <li>Note-taking materials</li>
+      <li>Group messaging app or service</li>
+      <li>Video conferencing software (e.g., Zoom or similar)</li>
+    </ul>
+    <h3>Links</h3>
+    <ul>
+      <li><a href="#">Slides</a></li>
+      <li><a href="#">Labs</a></li>
+      <li><a href="#">Quizzes</a></li>
+      <li><a href="#">Resources</a></li>
+    </ul>
+    <h3>Day Before the Class</h3>
+    <ul>
+      <li><input type="checkbox"> Email anything not yet sent to Co-Instructors and Moderators, the DAY BEFORE</li>
+      <li><input type="checkbox"> Read ALL the email from your Co-Instructors and Moderators</li>
+      <li><input type="checkbox"> Create a Group Address to text all Co-Instructors and Moderators during class, and TEST it the day before</li>
+      <li><input type="checkbox"> Check your computer health (Any updates to do? Equipment working properly? Good wi-fi connection?)</li>
+      <li><input type="checkbox"> Print relevant documents: Agenda, Contact List, Instructor Guide (or notes or PP), List of Break Out Rooms/Participants</li>
+      <li><input type="checkbox"> Check and change any weak or dead battery, and make sure computer(s) is charging up</li>
+    </ul>
+    <h3>One Hour Before the Class</h3>
+    <ul>
+      <li><input type="checkbox"> Set volumes on phones in the area and other devices to low or silent</li>
+      <li><input type="checkbox"> Turn off Notifications on the computer</li>
+      <li><input type="checkbox"> Remind others in your office or house that you will be starting a presentation</li>
+      <li><input type="checkbox"> Check your workstation, Internet connection, and all monitors, headsets, and microphones</li>
+      <li><input type="checkbox"> Refresh your beverage, your throat lozenges, your tissue, yourself</li>
+      <li><input type="checkbox"> Open all the files you will need (PowerPoint, etc.)</li>
+      <li><input type="checkbox"> Test any links or videos you plan to share</li>
+      <li><input type="checkbox"> Line up beverages, throat lozenges, or whatever you might need</li>
+      <li><input type="checkbox"> Ensure you have a way to take notes: blank document, paper and pen, or whatever will not interfere</li>
+    </ul>
+    <h3>45 to 30 Minutes Before Class</h3>
+    <ul>
+      <li><input type="checkbox"> Login to Class, turn on Audio and Video, and check your appearance</li>
+      <li><input type="checkbox"> Watch for people waiting in lobby and allow them in</li>
+      <li><input type="checkbox"> Greet people as they join the session, and ask for volume checks</li>
+      <li><input type="checkbox"> Check your lighting and adjust if needed</li>
+      <li><input type="checkbox"> Smile: a smile on your face and a smile in your voice</li>
+      <li><input type="checkbox"> Become your animated, enthusiastic, excited Instructor self, full of energy</li>
+    </ul>
+    <h3>At the Start of Class</h3>
+    <ul>
+      <li><input type="checkbox"> Announce the hard stop Breaks and Lunch Breaks</li>
+      <li><input type="checkbox"> Introduce all the Instructors and Moderators, and advise Participants about requesting Help</li>
+      <li><input type="checkbox"> Review the Toolbar, Chat, Raising Hand, Mute</li>
+      <li><input type="checkbox"> Set expectations for the class, (learning objectives, rules, and expectations of engagement, and methods to interact</li>
+    </ul>
+    <h3>Enhancing the Online Learning Experience</h3>
+    <ul>
+      <li><input type="checkbox"> Check on Participant progress with frequent opportunities for interactions and make adjustments if you need to do so</li>
+      <li><input type="checkbox"> Make occasional use of the “Teach by Asking” technique (Socratic method) to stimulate critical thinking</li>
+      <li><input type="checkbox"> Use eye contact effectively! Remember to look at your camera</li>
+      <li><input type="checkbox"> Follow the 5 X 5 Rule: Keep PowerPoints free of heavy descriptions; use bulleted lists, do not just read the PPTs</li>
+      <li><input type="checkbox"> Make note of anything you promise to email after the session</li>
+      <li><input type="checkbox"> Check on Breakout Groups to make sure students are in their respective groups and are working together. Follow up by letting them know when to return.</li>
+      <li><input type="checkbox"> Provide at least two 15-minute breaks during the day and a 45-minute lunch. Breaks/time can be increased, but not decreased. Factor breaks into your agenda so they do not get cut when other activities take too long.</li>
+    </ul>
+    <h3>Ending the Class</h3>
+    <ul>
+      <li><input type="checkbox"> Describe next steps, questions, and concerns, and contact information for last-minute questions</li>
+      <li><input type="checkbox"> Remind students about the Course Evaluation; provide prior to or just after last break if necessary to ensure more participation</li>
+      <li><input type="checkbox"> End graciously and on time. Participants have other time commitments to meet.</li>
+    </ul>
+    <div class="callout">Tip: Follow this checklist meticulously to ensure a smooth and engaging class session.</div>
+  </section>
+
+  </main>
+</body>
+</html>
