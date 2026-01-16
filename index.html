@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HTM150: Nuvolo for Technicians – Labs</title>
+  <title>HTM Moderator Guide</title>
   <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -126,7 +126,7 @@
 
     .container { max-width: none; margin: 0; }
 
-        input[type="text"],
+    input[type="text"],
     select {
       background-color: var(--input-bg);
       color: var(--text-dark);
@@ -136,16 +136,18 @@
       box-sizing: border-box;
       transition: background-color 0.3s ease, color 0.3s ease;
     }
+
+    .checklist {
+      list-style-type: none;
+      padding-left: 0;
+    }
   </style>
 </head>
 <body class="light">
-  <header class="header">
-    <h1>Moderator Guide</h1>
-  </header>
-
-  <section class="card filter-bar">
-    <div>
-      <strong>Select Lab:</strong>
+  <header class="header"><h1>Moderator Guide</h1></header>
+  <main>
+    <div class="card filter-bar">
+      <label for="labFilter"><strong>Select Course:</strong></label>
       <select id="labFilter" onchange="filterLabs()">
         <option value="">----Select----</option>
         <option value="User Guide">User Guide</option>
@@ -183,92 +185,621 @@
       <span class="slider"></span>
       <span class="switch-label">Dark Mode</span>
     </label>
-  </section>
 
-  <main class="container">
     <section class="lab-section active" data-lab="User Guide">
       <h2>User Guide</h2>
       <p>Welcome to the HTM Moderator Guide. This guide is designed to provide links, resources, and instructions to help you effectively moderate all HTM Courses.</p>
       <p>As a moderator, you will have access to various tools and resources to assist you in your role. Please refer to the sections below for detailed information on each lab and its associated resources.</p>
     </section>
 
-    ```html
-  <section class="lab-section" id="Moderator-Checklist">
-    <h2>Moderator Checklist</h2>
-    <h3>Basic Structure</h3>
-    <p>A comprehensive checklist for moderators to ensure all aspects of the class are covered, including preparation, during-class activities, and post-class follow-up.</p>
-    <h3>Resources Required</h3>
-    <ul>
-      <li>Email access</li>
-      <li>Computer and internet connection</li>
-      <li>Printing facilities</li>
-      <li>Note-taking materials</li>
-      <li>Group messaging app or service</li>
-      <li>Video conferencing software (e.g., Zoom or similar)</li>
-    </ul>
-    <h3>Links</h3>
-    <ul>
-      <li><a href="#">Slides</a></li>
-      <li><a href="#">Labs</a></li>
-      <li><a href="#">Quizzes</a></li>
-      <li><a href="#">Resources</a></li>
-    </ul>
-    <h3>Day Before the Class</h3>
-    <ul>
-      <li><input type="checkbox"> Email anything not yet sent to Co-Instructors and Moderators, the DAY BEFORE</li>
-      <li><input type="checkbox"> Read ALL the email from your Co-Instructors and Moderators</li>
-      <li><input type="checkbox"> Create a Group Address to text all Co-Instructors and Moderators during class, and TEST it the day before</li>
-      <li><input type="checkbox"> Check your computer health (Any updates to do? Equipment working properly? Good wi-fi connection?)</li>
-      <li><input type="checkbox"> Print relevant documents: Agenda, Contact List, Instructor Guide (or notes or PP), List of Break Out Rooms/Participants</li>
-      <li><input type="checkbox"> Check and change any weak or dead battery, and make sure computer(s) is charging up</li>
-    </ul>
-    <h3>One Hour Before the Class</h3>
-    <ul>
-      <li><input type="checkbox"> Set volumes on phones in the area and other devices to low or silent</li>
-      <li><input type="checkbox"> Turn off Notifications on the computer</li>
-      <li><input type="checkbox"> Remind others in your office or house that you will be starting a presentation</li>
-      <li><input type="checkbox"> Check your workstation, Internet connection, and all monitors, headsets, and microphones</li>
-      <li><input type="checkbox"> Refresh your beverage, your throat lozenges, your tissue, yourself</li>
-      <li><input type="checkbox"> Open all the files you will need (PowerPoint, etc.)</li>
-      <li><input type="checkbox"> Test any links or videos you plan to share</li>
-      <li><input type="checkbox"> Line up beverages, throat lozenges, or whatever you might need</li>
-      <li><input type="checkbox"> Ensure you have a way to take notes: blank document, paper and pen, or whatever will not interfere</li>
-    </ul>
-    <h3>45 to 30 Minutes Before Class</h3>
-    <ul>
-      <li><input type="checkbox"> Login to Class, turn on Audio and Video, and check your appearance</li>
-      <li><input type="checkbox"> Watch for people waiting in lobby and allow them in</li>
-      <li><input type="checkbox"> Greet people as they join the session, and ask for volume checks</li>
-      <li><input type="checkbox"> Check your lighting and adjust if needed</li>
-      <li><input type="checkbox"> Smile: a smile on your face and a smile in your voice</li>
-      <li><input type="checkbox"> Become your animated, enthusiastic, excited Instructor self, full of energy</li>
-    </ul>
-    <h3>At the Start of Class</h3>
-    <ul>
-      <li><input type="checkbox"> Announce the hard stop Breaks and Lunch Breaks</li>
-      <li><input type="checkbox"> Introduce all the Instructors and Moderators, and advise Participants about requesting Help</li>
-      <li><input type="checkbox"> Review the Toolbar, Chat, Raising Hand, Mute</li>
-      <li><input type="checkbox"> Set expectations for the class, (learning objectives, rules, and expectations of engagement, and methods to interact</li>
-    </ul>
-    <h3>Enhancing the Online Learning Experience</h3>
-    <ul>
-      <li><input type="checkbox"> Check on Participant progress with frequent opportunities for interactions and make adjustments if you need to do so</li>
-      <li><input type="checkbox"> Make occasional use of the “Teach by Asking” technique (Socratic method) to stimulate critical thinking</li>
-      <li><input type="checkbox"> Use eye contact effectively! Remember to look at your camera</li>
-      <li><input type="checkbox"> Follow the 5 X 5 Rule: Keep PowerPoints free of heavy descriptions; use bulleted lists, do not just read the PPTs</li>
-      <li><input type="checkbox"> Make note of anything you promise to email after the session</li>
-      <li><input type="checkbox"> Check on Breakout Groups to make sure students are in their respective groups and are working together. Follow up by letting them know when to return.</li>
-      <li><input type="checkbox"> Provide at least two 15-minute breaks during the day and a 45-minute lunch. Breaks/time can be increased, but not decreased. Factor breaks into your agenda so they do not get cut when other activities take too long.</li>
-    </ul>
-    <h3>Ending the Class</h3>
-    <ul>
-      <li><input type="checkbox"> Describe next steps, questions, and concerns, and contact information for last-minute questions</li>
-      <li><input type="checkbox"> Remind students about the Course Evaluation; provide prior to or just after last break if necessary to ensure more participation</li>
-      <li><input type="checkbox"> End graciously and on time. Participants have other time commitments to meet.</li>
-    </ul>
-    <div class="callout">Tip: Follow this checklist meticulously to ensure a smooth and engaging class session.</div>
-  </section>
+    <section class="lab-section" data-lab="Moderator Checklist">
+      <h2>Moderator Checklist</h2>
+      <h3>Basic Structure</h3>
+      <p>A comprehensive checklist for moderators to ensure all aspects of the class are covered, including preparation, during-class activities, and post-class follow-up.</p>
+      <h3>Day Before the Class</h3>
+      <ul class="checklist">
+        <li><input type="checkbox"> Email anything not yet sent to Co-Instructors and Moderators, the DAY BEFORE</li>
+        <li><input type="checkbox"> Read ALL the email from your Co-Instructors and Moderators</li>
+        <li><input type="checkbox"> Create a Group Address to text all Co-Instructors and Moderators during class, and TEST it the day before</li>
+        <li><input type="checkbox"> Check your computer health (Any updates to do? Equipment working properly? Good wi-fi connection?)</li>
+        <li><input type="checkbox"> Print relevant documents: Agenda, Contact List, Instructor Guide (or notes or PP), List of Break Out Rooms/Participants</li>
+        <li><input type="checkbox"> Check and change any weak or dead battery, and make sure computer(s) is charging up</li>
+      </ul>
+      <h3>One Hour Before the Class</h3>
+      <ul class="checklist">
+        <li><input type="checkbox"> Set volumes on phones in the area and other devices to low or silent</li>
+        <li><input type="checkbox"> Turn off Notifications on the computer</li>
+        <li><input type="checkbox"> Remind others in your office or house that you will be starting a presentation</li>
+        <li><input type="checkbox"> Check your workstation, Internet connection, and all monitors, headsets, and microphones</li>
+        <li><input type="checkbox"> Refresh your beverage, your throat lozenges, your tissue, yourself</li>
+        <li><input type="checkbox"> Open all the files you will need (PowerPoint, etc.)</li>
+        <li><input type="checkbox"> Test any links or videos you plan to share</li>
+        <li><input type="checkbox"> Line up beverages, throat lozenges, or whatever you might need</li>
+        <li><input type="checkbox"> Ensure you have a way to take notes: blank document, paper and pen, or whatever will not interfere</li>
+      </ul>
+      <h3>45 to 30 Minutes Before Class</h3>
+      <ul class="checklist">
+        <li><input type="checkbox"> Login to Class, turn on Audio and Video, and check your appearance</li>
+        <li><input type="checkbox"> Watch for people waiting in lobby and allow them in</li>
+        <li><input type="checkbox"> Greet people as they join the session, and ask for volume checks</li>
+        <li><input type="checkbox"> Check your lighting and adjust if needed</li>
+        <li><input type="checkbox"> Smile: a smile on your face and a smile in your voice</li>
+        <li><input type="checkbox"> Become your animated, enthusiastic, excited Instructor self, full of energy</li>
+      </ul>
+      <h3>At the Start of Class</h3>
+      <ul class="checklist">
+        <li><input type="checkbox"> Announce the hard stop Breaks and Lunch Breaks</li>
+        <li><input type="checkbox"> Introduce all the Instructors and Moderators, and advise Participants about requesting Help</li>
+        <li><input type="checkbox"> Review the Toolbar, Chat, Raising Hand, Mute</li>
+        <li><input type="checkbox"> Set expectations for the class, (learning objectives, rules, and expectations of engagement, and methods to interact</li>
+      </ul>
+      <h3>Enhancing the Online Learning Experience</h3>
+      <ul class="checklist">
+        <li><input type="checkbox"> Check on Participant progress with frequent opportunities for interactions and make adjustments if you need to do so</li>
+        <li><input type="checkbox"> Make occasional use of the “Teach by Asking” technique (Socratic method) to stimulate critical thinking</li>
+        <li><input type="checkbox"> Use eye contact effectively! Remember to look at your camera</li>
+        <li><input type="checkbox"> Follow the 5 X 5 Rule: Keep PowerPoints free of heavy descriptions; use bulleted lists, do not just read the PPTs</li>
+        <li><input type="checkbox"> Make note of anything you promise to email after the session</li>
+        <li><input type="checkbox"> Check on Breakout Groups to make sure students are in their respective groups and are working together. Follow up by letting them know when to return.</li>
+        <li><input type="checkbox"> Provide at least two 15-minute breaks during the day and a 45-minute lunch. Breaks/time can be increased, but not decreased. Factor breaks into your agenda so they do not get cut when other activities take too long.</li>
+      </ul>
+      <h3>Ending the Class</h3>
+      <ul class="checklist">
+        <li><input type="checkbox"> Describe next steps, questions, and concerns, and contact information for last-minute questions</li>
+        <li><input type="checkbox"> Remind students about the Course Evaluation; provide prior to or just after last break if necessary to ensure more participation</li>
+        <li><input type="checkbox"> End graciously and on time. Participants have other time commitments to meet.</li>
+      </ul>
+      <div class="callout">Tip: Follow this checklist meticulously to ensure a smooth and engaging class session.</div>
+    </section>
+
+    <section class="lab-section" data-lab="HTM PS101: Patient Safety Fundamentals">
+  <h2>HTM PS101: Patient Safety Fundamentals</h2>
+  <h3>Class Structure</h3>
+  <p>Start - End Time: 9:00 AM - 6:00 PM EST
+  <br>Number of Days: 3</p>
+  <p>Instructor(s): Multiple; Paul McGuire
+  <br>Instructor Contact Information: paul.mcguire@kildagroup.com</p>
+
+  <h3>Key Links</h3>
+  <ul>
+    <li>Attendance Sheet: <a href="https://kildagroup.sharepoint.com/sites/KG_CS_VA_HTM/Courses/Forms/AllItems.aspx?id=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FHTM111%20%2D%20Intro%20to%20Cyber%2FYYYY%5FMM%20Delivery&viewid=f46bbdd9%2D454c%2D4121%2Dacc1%2Db79c7c28c255&viewpath=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FForms%2FAllItems%2Easpx">Kilda Group Attendance Sheets</a></li>
+    <li>VA Student Course Content: <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM-PS101-Course-Content.aspx">HTM PS101 Course Content</a></li>
+    <li>Online Resources Used: N/A</li>
+  </ul>
+
+  <h3>Day 1 Class Structure and Introduction Script</h3>
+  <p>Good afternoon everyone – welcome to HTM111: Introduction to HTM Cybersecurity.</p>
+  <p>We’re excited to have you all here. Before we get started, I need to cover a few items.</p>
+  <p>First, 90% attendance is required to get a completion certificate. You may have conflicts at some point – the key to ensuring you meet the 90% is by notifying me as soon as possible.</p>
+  <p>We take attendance at the beginning of each session. Please type your name in the chat for the first attendance!</p>
+  <p>This is a virtual class and what that means is that errors will pop-up on our side & on yours (construction takes you offline, bad weather, MS Teams decides not to work, etc.). Again, the common theme is communication. Troubleshooting starts with us! Send a message in the chat or shoot me an email. If you leave because of technical issues and do not tell me, you will be marked absent for a session.</p>
+  <ul>
+    <li>It’s hard in virtual classes to know, unless you speak up, if the information is sinking in. With an in-person class, we can see your blank stares & explain it in a different way. We don’t have that with virtual classes.</li>
+    <li>Please type a question in the chat or come off mute (when appropriate – i.e. not in the middle of a sentence) to ask a question.</li>
+    <li>Recording – we’ll be recording for your future viewing</li>
+  </ul>
+  <p>Overview of MS Teams, if you aren’t already familiar</p>
+  <ul>
+    <li>Raising your hand.</li>
+    <li>The chat button – Chat is informal, don’t worry about spelling, ask questions, use it!</li>
+    <li>Sharing your screen – right next the leave button – select the page you’d like to share.</li>
+  </ul>
+  <p>Finally before I hand it over to <<<the instructor>>>, let’s cover the Hatch Act. As a reminder, as members of the VA – we must adhere to the Hatch Act. Please keep all personal & political opinions to yourself.</p>
+  <p>Great. Please let me know if you have any additional questions and I’ll pass it over to <<<instructor>>> to get us started today.</p>
+
+  <h3>Day 2+ Class Structure</h3>
+  <p>N/A (1-day course)</p>
+</section>
+
+    <section class="lab-section" data-lab="HTM111: Introduction to HTM Cybersecurity">
+  <h2>HTM111: Introduction to HTM Cybersecurity</h2>
+  <h3>Class Structure</h3>
+  <p>Start - End Time: 9:00 AM - 6:00 PM EST
+  <br>Number of Days: 1</p>
+  <p>Instructor(s): Brett Glines
+  <br>Instructor Contact Information: lbglines@outlook.com; brett@kildagroup.com; lbgw@outlook.com</p>
+
+  <h3>Key Links</h3>
+  <ul>
+    <li>Attendance Sheet: <a href="https://kildagroup.sharepoint.com/sites/KG_CS_VA_HTM/Courses/Forms/AllItems.aspx?id=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FHTM111%20%2D%20Intro%20to%20Cyber%2FYYYY%5FMM%20Delivery&viewid=f46bbdd9%2D454c%2D4121%2Dacc1%2Db79c7c28c255&viewpath=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FForms%2FAllItems%2Easpx">Kilda Group Attendance Sheets</a></li>
+    <li>VA Student Course Content: <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM111-Course-Content.aspx">HTM111 Course Content</a></li>
+    <li>Online Resources Used: None</li>
+  </ul>
+
+  <h3>Day 1 Class Structure and Introduction Script</h3>
+  <p>Good morning everyone – welcome to HTM111: Introduction to HTM Cybersecurity.</p>
+  <p>We’re excited to have you all here. Before we get started, I need to cover a few items.</p>
+  <p>First, 90% attendance is required to get a completion certificate. You may have conflicts at some point – the key to ensuring you meet the 90% is by notifying me as soon as possible.</p>
+  <p>We take attendance 4 times daily: at the beginning of each session, after the first break, after the lunch break, and at the end of each session. Please type your name in the chat for the first attendance!</p>
+  <p>This is a virtual class and what that means is that errors will pop-up on our side & on yours (construction takes you offline, bad weather, MS Teams decides not to work, etc.). Again, the common theme is communication. Troubleshooting starts with us! Send a message in the chat or shoot me an email. If you leave because of technical issues and do not tell me, you will be marked absent for a session.</p>
+  <ul>
+    <li>It’s hard in virtual classes to know, unless you speak up, if the information is sinking in. With an in-person class, we can see your blank stares & explain it in a different way. We don’t have that with virtual classes.</li>
+    <li>Please type a question in the chat or come off mute (when appropriate – i.e. not in the middle of a sentence) to ask a question.</li>
+    <li>Recording – we’ll be recording for your future viewing</li>
+  </ul>
+  <p>Overview of MS Teams, if you aren’t already familiar</p>
+  <ul>
+    <li>Raising your hand.</li>
+    <li>The chat button – Chat is informal, don’t worry about spelling, ask questions, use it!</li>
+    <li>Sharing your screen – right next the leave button – select the page you’d like to share.</li>
+  </ul>
+  <p>Finally before I hand it over to Brett, let’s cover the Hatch Act. As a reminder, as members of the VA – we must adhere to the Hatch Act. Please keep all personal & political opinions to yourself.</p>
+  <p>Great. Please let me know if you have any additional questions and I’ll pass it over to Brett to get us started today.</p>
+</section>
+
+<section class="lab-section" data-lab="HTM112: Basic Networking Course">
+  <h2>HTM112: Basic Networking Course</h2>
+  <h3>Class Structure</h3>
+  <p>Start - End Time: 9:00 AM - 6:00 PM EST<br>Number of Days: 5</p>
+  <p>Instructor(s): Brett Glines<br>Instructor Contact Information: lbglines@outlook.com; brett@kildagroup.com; lbgw@outlook.com</p>
+
+  <h3>Key Links</h3>
+  <ul>
+    <li>Attendance Sheet: <a href="https://kildagroup.sharepoint.com/sites/KG_CS_VA_HTM/Courses/Forms/AllItems.aspx?id=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FHTM112%20%2D%20Basic%20Networking%2FYYYY%5FMM%20Delivery&viewid=f46bbdd9%2D454c%2D4121%2Dacc1%2Db79c7c28c255&viewpath=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FForms%2FAllItems%2Easpx">Kilda Group Attendance Sheets</a></li>
+    <li>VA Student Course Content: <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM112-Course-Content.aspx">HTM112 Course Content</a></li>
+    <li>Online Resources Used: Amazon Workspaces (see Quiz and Software Resources section)</li>
+  </ul>
+
+  <h3>Day 1 Class Structure and Introduction Script</h3>
+  <p>Good morning everyone – welcome to HTM112: Basic Networking Course.</p>
+  <p>We’re excited to have you all here. Before we get started, I need to cover a few items.</p>
+  <p>First, 90% attendance is required to get a completion certificate. You may have conflicts at some point – the key to ensuring you meet the 90% is by notifying me as soon as possible.</p>
+  <p>We take attendance 4 times daily: at the beginning of each session, after the first break, after the lunch break, and at the end of each session. Please type your name in the chat for the first attendance!</p>
+  <p>This is a virtual class and what that means is that errors will pop-up on our side & on yours (construction takes you offline, bad weather, MS Teams decides not to work, etc.). Again, the common theme is communication. Troubleshooting starts with us! Send a message in the chat or shoot me an email. If you leave because of technical issues and do not tell me, you will be marked absent for a session.</p>
+  <ul>
+    <li>It’s hard in virtual classes to know, unless you speak up, if the information is sinking in. With an in-person class, we can see your blank stares & explain it in a different way. We don’t have that with virtual classes.</li>
+    <li>Please type a question in the chat or come off mute (when appropriate – i.e. not in the middle of a sentence) to ask a question.</li>
+    <li>Recording – we’ll be recording for your future viewing</li>
+  </ul>
+  <p>Overview of MS Teams, if you aren’t already familiar</p>
+  <ul>
+    <li>Raising your hand.</li>
+    <li>The chat button – Chat is informal, don’t worry about spelling, ask questions, use it!</li>
+    <li>Sharing your screen – right next the leave button – select the page you’d like to share.</li>
+  </ul>
+  <p>Finally before I hand it over to <<<the instructor>>>, let’s cover the Hatch Act. As a reminder, as members of the VA – we must adhere to the Hatch Act. Please keep all personal & political opinions to yourself.</p>
+  <p>Great. Please let me know if you have any additional questions and I’ll pass it over to <<<instructor>>> to get us started today.</p>
+<h3>Daily Schedule:</h3>
+  <ul>
+    <li>15-minute break at 11:00 AM</li>
+    <li>1-hour lunch at 1:00 PM</li>
+    <li>15-minute break at 3:00 PM</li>
+  </ul>
+  <p>Day 5 (Friday): Morning lecture by VA SME</p>
+</section>
+
+<section class="lab-section" data-lab="HTM211: Introduction to Operating Systems & SQL">
+  <h2>HTM211: Introduction to Operating Systems & SQL</h2>
+  <h3>Class Structure</h3>
+  <p>Start - End Time: 9:00 AM - 6:00 PM EST<br>Number of Days: 2</p>
+  <p>Instructor(s): Brett Glines<br>Instructor Contact Information: lbglines@outlook.com; brett@kildagroup.com; lbgw@outlook.com</p>
+
+  <h3>Key Links</h3>
+  <ul>
+    <li>Attendance Sheet: <a href="https://kildagroup.sharepoint.com/sites/KG_CS_VA_HTM/Courses/Forms/AllItems.aspx?id=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FHTM211%20%2D%20Intro%20to%20OS%20%26%20SQL%2FYYYY%5FMM%20Delivery&viewid=f46bbdd9%2D454c%2D4121%2Dacc1%2Db79c7c28c255&viewpath=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FForms%2FAllItems%2Easpx">Kilda Group Attendance Sheets</a></li>
+    <li>VA Student Course Content: <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM211-Course-Content.aspx">HTM211 Course Content</a></li>
+    <li>Online Resources Used: Amazon Workspaces (see Quiz and Software Resources section)</li>
+  </ul>
+
+  <h3>Day 1 Class Structure and Introduction Script</h3>
+  <p>Good afternoon everyone – welcome to HTM211: Introduction to Operating Systems & SQL.</p>
+  <p>We’re excited to have you all here. Before we get started, I need to cover a few items.</p>
+  <p>First, 90% attendance is required to get a completion certificate. You may have conflicts at some point – the key to ensuring you meet the 90% is by notifying me as soon as possible.</p>
+  <p>We take attendance at the beginning of each session. Please type your name in the chat for the first attendance!</p>
+  <p>This is a virtual class and what that means is that errors will pop-up on our side & on yours (construction takes you offline, bad weather, MS Teams decides not to work, etc.). Again, the common theme is communication. Troubleshooting starts with us! Send a message in the chat or shoot me an email. If you leave because of technical issues and do not tell me, you will be marked absent for a session.</p>
+  <ul>
+    <li>It’s hard in virtual classes to know, unless you speak up, if the information is sinking in. With an in-person class, we can see your blank stares & explain it in a different way. We don’t have that with virtual classes.</li>
+    <li>Please type a question in the chat or come off mute (when appropriate – i.e. not in the middle of a sentence) to ask a question.</li>
+    <li>Recording – we’ll be recording for your future viewing</li>
+  </ul>
+  <p>Overview of MS Teams, if you aren’t already familiar</p>
+  <ul>
+    <li>Raising your hand.</li>
+    <li>The chat button – Chat is informal, don’t worry about spelling, ask questions, use it!</li>
+    <li>Sharing your screen – right next the leave button – select the page you’d like to share.</li>
+  </ul>
+  <p>Finally before I hand it over to <<<the instructor>>>, let’s cover the Hatch Act. As a reminder, as members of the VA – we must adhere to the Hatch Act. Please keep all personal & political opinions to yourself.</p>
+  <p>Great. Please let me know if you have any additional questions and I’ll pass it over to <<<instructor>>> to get us started today.</p>
+
+  <h3>Day 2+ Class Structure</h3>
+  <p>[Details for Day 2]</p>
+</section>
+
+<section class="lab-section" data-lab="HTM212: Intermediate Networking">
+  <h2>HTM212: Intermediate Networking</h2>
+  <h3>Class Structure</h3>
+  <p>Start - End Time: 9:00 AM - 6:00 PM EST<br>Number of Days: 2</p>
+  <p>Instructor(s): Brett Glines<br>Instructor Contact Information: lbglines@outlook.com; brett@kildagroup.com; lbgw@outlook.com</p>
+
+  <h3>Key Links</h3>
+  <ul>
+    <li>Attendance Sheet: <a href="https://kildagroup.sharepoint.com/sites/KG_CS_VA_HTM/Courses/Forms/AllItems.aspx?id=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FHTM212%20%2D%20Intermediate%20Networking%2FYYYY%5FMM%20Delivery&viewid=f46bbdd9%2D454c%2D4121%2Dacc1%2Db79c7c28c255&viewpath=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FForms%2FAllItems%2Easpx">Kilda Group Attendance Sheets</a></li>
+    <li>VA Student Course Content: <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM212-Course-Content.aspx">HTM212 Course Content</a></li>
+    <li>Online Resources Used: Amazon Workspaces (see Quiz and Software Resources section)</li>
+  </ul>
+
+  <h3>Day 1 Class Structure and Introduction Script</h3>
+  <p>Good afternoon everyone – welcome to HTM212: Intermediate Networking.</p>
+  <p>We’re excited to have you all here. Before we get started, I need to cover a few items.</p>
+  <p>First, 90% attendance is required to get a completion certificate. You may have conflicts at some point – the key to ensuring you meet the 90% is by notifying me as soon as possible.</p>
+  <p>We take attendance at the beginning of each session. Please type your name in the chat for the first attendance!</p>
+  <p>This is a virtual class and what that means is that errors will pop-up on our side & on yours (construction takes you offline, bad weather, MS Teams decides not to work, etc.). Again, the common theme is communication. Troubleshooting starts with us! Send a message in the chat or shoot me an email. If you leave because of technical issues and do not tell me, you will be marked absent for a session.</p>
+  <ul>
+    <li>It’s hard in virtual classes to know, unless you speak up, if the information is sinking in. With an in-person class, we can see your blank stares & explain it in a different way. We don’t have that with virtual classes.</li>
+    <li>Please type a question in the chat or come off mute (when appropriate – i.e. not in the middle of a sentence) to ask a question.</li>
+    <li>Recording – we’ll be recording for your future viewing</li>
+  </ul>
+  <p>Overview of MS Teams, if you aren’t already familiar</p>
+  <ul>
+    <li>Raising your hand.</li>
+    <li>The chat button – Chat is informal, don’t worry about spelling, ask questions, use it!</li>
+    <li>Sharing your screen – right next the leave button – select the page you’d like to share.</li>
+  </ul>
+  <p>Finally before I hand it over to <<<the instructor>>>, let’s cover the Hatch Act. As a reminder, as members of the VA – we must adhere to the Hatch Act. Please keep all personal & political opinions to yourself.</p>
+  <p>Great. Please let me know if you have any additional questions and I’ll pass it over to <<<instructor>>> to get us started today.</p>
+
+  <h3>Day 2+ Class Structure</h3>
+  <p>[Details for Day 2]</p>
+</section>
+
+<section class="lab-section" data-lab="HTM213: Introduction to Virtual Machines">
+  <h2>HTM213: Introduction to Virtual Machines</h2>
+  <h3>Class Structure</h3>
+  <p>Start - End Time: 9:00 AM - 6:00 PM EST<br>Number of Days: 1</p>
+  <p>Instructor(s): Brett Glines<br>Instructor Contact Information: lbglines@outlook.com; brett@kildagroup.com; lbgw@outlook.com</p>
+
+  <h3>Key Links</h3>
+  <ul>
+    <li>Attendance Sheet: <a href="https://kildagroup.sharepoint.com/sites/KG_CS_VA_HTM/Courses/Forms/AllItems.aspx?id=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FHTM213%20%2D%20Intro%20to%20VMs%2FYYYY%5FMM%20Delivery&viewid=f46bbdd9%2D454c%2D4121%2Dacc1%2Db79c7c28c255&viewpath=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FForms%2FAllItems%2Easpx">Kilda Group Attendance Sheets</a></li>
+    <li>VA Student Course Content: <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM213-Course-Content.aspx">HTM213 Course Content</a></li>
+    <li>Online Resources Used: Amazon Workspaces (see Quiz and Software Resources section)</li>
+  </ul>
+
+  <h3>Day 1 Class Structure and Introduction Script</h3>
+  <p>Good afternoon everyone – welcome to HTM213: Introduction to Virtual Machines.</p>
+  <p>We’re excited to have you all here. Before we get started, I need to cover a few items.</p>
+  <p>First, 90% attendance is required to get a completion certificate. You may have conflicts at some point – the key to ensuring you meet the 90% is by notifying me as soon as possible.</p>
+  <p>We take attendance at the beginning of each session. Please type your name in the chat for the first attendance!</p>
+  <p>This is a virtual class and what that means is that errors will pop-up on our side & on yours (construction takes you offline, bad weather, MS Teams decides not to work, etc.). Again, the common theme is communication. Troubleshooting starts with us! Send a message in the chat or shoot me an email. If you leave because of technical issues and do not tell me, you will be marked absent for a session.</p>
+  <ul>
+    <li>It’s hard in virtual classes to know, unless you speak up, if the information is sinking in. With an in-person class, we can see your blank stares & explain it in a different way. We don’t have that with virtual classes.</li>
+    <li>Please type a question in the chat or come off mute (when appropriate – i.e. not in the middle of a sentence) to ask a question.</li>
+    <li>Recording – we’ll be recording for your future viewing</li>
+  </ul>
+  <p>Overview of MS Teams, if you aren’t already familiar</p>
+  <ul>
+    <li>Raising your hand.</li>
+    <li>The chat button – Chat is informal, don’t worry about spelling, ask questions, use it!</li>
+    <li>Sharing your screen – right next the leave button – select the page you’d like to share.</li>
+  </ul>
+  <p>Finally before I hand it over to <<<the instructor>>>, let’s cover the Hatch Act. As a reminder, as members of the VA – we must adhere to the Hatch Act. Please keep all personal & political opinions to yourself.</p>
+  <p>Great. Please let me know if you have any additional questions and I’ll pass it over to <<<instructor>>> to get us started today.</p>
+
+  <h3>Day 2+ Class Structure</h3>
+  <p>N/A (1-day course)</p>
+</section>
+
+<section class="lab-section" data-lab="HTM115: Introduction to Windows Server Management">
+  <h2>HTM115: Introduction to Windows Server Management</h2>
+  <h3>Class Structure</h3>
+  <p>Start - End Time: 9:00 AM - 6:00 PM EST<br>Number of Days: 1</p>
+  <p>Instructor(s): Brett Glines<br>Instructor Contact Information: lbglines@outlook.com; brett@kildagroup.com; lbgw@outlook.com</p>
+
+  <h3>Key Links</h3>
+  <ul>
+    <li>Attendance Sheet: <a href="https://kildagroup.sharepoint.com/sites/KG_CS_VA_HTM/Courses/Forms/AllItems.aspx?id=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FHTM115%20%2D%20Windows%20Server%2FYYYY%5FMM%20Delivery&viewid=f46bbdd9%2D454c%2D4121%2Dacc1%2Db79c7c28c255&viewpath=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FForms%2FAllItems%2Easpx">Kilda Group Attendance Sheets</a></li>
+    <li>VA Student Course Content: <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM115-Course-Content.aspx">HTM115 Course Content</a></li>
+    <li>Online Resources Used: Amazon Workspaces (see Quiz and Software Resources section)</li>
+  </ul>
+
+  <h3>Day 1 Class Structure and Introduction Script</h3>
+  <p>Good afternoon everyone – welcome to HTM115: Introduction to Windows Server Management.</p>
+  <p>We’re excited to have you all here. Before we get started, I need to cover a few items.</p>
+  <p>First, 90% attendance is required to get a completion certificate. You may have conflicts at some point – the key to ensuring you meet the 90% is by notifying me as soon as possible.</p>
+  <p>We take attendance at the beginning of each session. Please type your name in the chat for the first attendance!</p>
+  <p>This is a virtual class and what that means is that errors will pop-up on our side & on yours (construction takes you offline, bad weather, MS Teams decides not to work, etc.). Again, the common theme is communication. Troubleshooting starts with us! Send a message in the chat or shoot me an email. If you leave because of technical issues and do not tell me, you will be marked absent for a session.</p>
+  <ul>
+    <li>It’s hard in virtual classes to know, unless you speak up, if the information is sinking in. With an in-person class, we can see your blank stares & explain it in a different way. We don’t have that with virtual classes.</li>
+    <li>Please type a question in the chat or come off mute (when appropriate – i.e. not in the middle of a sentence) to ask a question.</li>
+    <li>Recording – we’ll be recording for your future viewing</li>
+  </ul>
+  <p>Overview of MS Teams, if you aren’t already familiar</p>
+  <ul>
+    <li>Raising your hand.</li>
+    <li>The chat button – Chat is informal, don’t worry about spelling, ask questions, use it!</li>
+    <li>Sharing your screen – right next the leave button – select the page you’d like to share.</li>
+  </ul>
+  <p>Finally before I hand it over to <<<the instructor>>>, let’s cover the Hatch Act. As a reminder, as members of the VA – we must adhere to the Hatch Act. Please keep all personal & political opinions to yourself.</p>
+  <p>Great. Please let me know if you have any additional questions and I’ll pass it over to <<<instructor>>> to get us started today.</p>
+
+  <h3>Day 2+ Class Structure</h3>
+  <p>N/A (1-day course)</p>
+</section>
+
+<section class="lab-section" data-lab="HTM116: SQL Server Fundamentals">
+  <h2>HTM116: SQL Server Fundamentals</h2>
+  <h3>Class Structure</h3>
+  <p>Start - End Time: 9:00 AM - 6:00 PM EST<br>Number of Days: 1</p>
+  <p>Instructor(s): Brett Glines<br>Instructor Contact Information: lbglines@outlook.com; brett@kildagroup.com; lbgw@outlook.com</p>
+
+  <h3>Key Links</h3>
+  <ul>
+    <li>Attendance Sheet: <a href="https://kildagroup.sharepoint.com/sites/KG_CS_VA_HTM/Courses/Forms/AllItems.aspx?id=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FHTM116%20%2D%20SQL%20Server%2FYYYY%5FMM%20Delivery&viewid=f46bbdd9%2D454c%2D4121%2Dacc1%2Db79c7c28c255&viewpath=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FForms%2FAllItems%2Easpx">Kilda Group Attendance Sheets</a></li>
+    <li>VA Student Course Content: <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM116-Course-Content.aspx">HTM116 Course Content</a></li>
+    <li>Online Resources Used: Amazon Workspaces (see Quiz and Software Resources section)</li>
+  </ul>
+
+  <h3>Day 1 Class Structure and Introduction Script</h3>
+  <p>Good afternoon everyone – welcome to HTM116: SQL Server Fundamentals.</p>
+  <p>We’re excited to have you all here. Before we get started, I need to cover a few items.</p>
+  <p>First, 90% attendance is required to get a completion certificate. You may have conflicts at some point – the key to ensuring you meet the 90% is by notifying me as soon as possible.</p>
+  <p>We take attendance at the beginning of each session. Please type your name in the chat for the first attendance!</p>
+  <p>This is a virtual class and what that means is that errors will pop-up on our side & on yours (construction takes you offline, bad weather, MS Teams decides not to work, etc.). Again, the common theme is communication. Troubleshooting starts with us! Send a message in the chat or shoot me an email. If you leave because of technical issues and do not tell me, you will be marked absent for a session.</p>
+  <ul>
+    <li>It’s hard in virtual classes to know, unless you speak up, if the information is sinking in. With an in-person class, we can see your blank stares & explain it in a different way. We don’t have that with virtual classes.</li>
+    <li>Please type a question in the chat or come off mute (when appropriate – i.e. not in the middle of a sentence) to ask a question.</li>
+    <li>Recording – we’ll be recording for your future viewing</li>
+  </ul>
+  <p>Overview of MS Teams, if you aren’t already familiar</p>
+  <ul>
+    <li>Raising your hand.</li>
+    <li>The chat button – Chat is informal, don’t worry about spelling, ask questions, use it!</li>
+    <li>Sharing your screen – right next the leave button – select the page you’d like to share.</li>
+  </ul>
+  <p>Finally before I hand it over to <<<the instructor>>>, let’s cover the Hatch Act. As a reminder, as members of the VA – we must adhere to the Hatch Act. Please keep all personal & political opinions to yourself.</p>
+  <p>Great. Please let me know if you have any additional questions and I’ll pass it over to <<<instructor>>> to get us started today.</p>
+</section>
+
+<section class="lab-section" data-lab="HTM214: Intermediate Principles of HTM Cybersecurity">
+  <h2>HTM214: Intermediate Principles of HTM Cybersecurity</h2>
+  <h3>Class Structure</h3>
+  <p>Start - End Time: 10:00 AM - 4:00 PM EST<br>Number of Days: 2</p>
+  <p>Instructor(s): Brett Glines<br>Instructor Contact Information: lbglines@outlook.com; brett@kildagroup.com; lbgw@outlook.com</p>
+
+  <h3>Key Links</h3>
+  <ul>
+    <li>Attendance Sheet: <a href="https://kildagroup.sharepoint.com/sites/KG_CS_VA_HTM/Courses/Forms/AllItems.aspx?id=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FHTM214%20%2D%20Principles%20of%20Cyber%2FYYYY%5FMM%20Delivery&viewid=f46bbdd9%2D454c%2D4121%2Dacc1%2Db79c7c28c255&viewpath=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FForms%2FAllItems%2Easpx">Kilda Group Attendance Sheets</a></li>
+    <li>VA Student Course Content: <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM214-Course-Content.aspx">HTM214 Course Content</a></li>
+    <li>Online Resources Used: N/A</li>
+  </ul>
+
+  <h3>Day 1 Class Structure and Introduction Script</h3>
+  <p>Good afternoon everyone – welcome to HTM214: Intermediate Principles of HTM Cybersecurity.</p>
+  <p>We’re excited to have you all here. Before we get started, I need to cover a few items.</p>
+  <p>First, 90% attendance is required to get a completion certificate. You may have conflicts at some point – the key to ensuring you meet the 90% is by notifying me as soon as possible.</p>
+  <p>We take attendance at the beginning of each session. Please type your name in the chat for the first attendance!</p>
+  <p>This is a virtual class and what that means is that errors will pop-up on our side & on yours (construction takes you offline, bad weather, MS Teams decides not to work, etc.). Again, the common theme is communication. Troubleshooting starts with us! Send a message in the chat or shoot me an email. If you leave because of technical issues and do not tell me, you will be marked absent for a session.</p>
+  <ul>
+    <li>It’s hard in virtual classes to know, unless you speak up, if the information is sinking in. With an in-person class, we can see your blank stares & explain it in a different way. We don’t have that with virtual classes.</li>
+    <li>Please type a question in the chat or come off mute (when appropriate – i.e. not in the middle of a sentence) to ask a question.</li>
+    <li>Recording – we’ll be recording for your future viewing</li>
+  </ul>
+  <p>Overview of MS Teams, if you aren’t already familiar</p>
+  <ul>
+    <li>Raising your hand.</li>
+    <li>The chat button – Chat is informal, don’t worry about spelling, ask questions, use it!</li>
+    <li>Sharing your screen – right next the leave button – select the page you’d like to share.</li>
+  </ul>
+  <p>Finally before I hand it over to <<<the instructor>>>, let’s cover the Hatch Act. As a reminder, as members of the VA – we must adhere to the Hatch Act. Please keep all personal & political opinions to yourself.</p>
+  <p>Great. Please let me know if you have any additional questions and I’ll pass it over to <<<instructor>>> to get us started today.</p>
+
+  <h3>Day 2+ Class Structure</h3>
+  <p>[Details for Day 2]</p>
+</section>
+
+<section class="lab-section" data-lab="HTM130: Productivity & Communication Fundamentals">
+  <h2>HTM130: Productivity & Communication Fundamentals</h2>
+  <h3>Class Structure</h3>
+  <p>Start - End Time: 10:00 AM - 4:00 PM EST<br>Number of Days: 1</p>
+  <p>Instructor(s): Paul McGuire (ForeSide LLC)<br>Instructor Contact Information: paul@foresideprojects.com; paul.mcguire.ctr@kildagroup.com</p>
+
+  <h3>Key Links</h3>
+  <ul>
+    <li>Attendance Sheet: <a href="https://kildagroup.sharepoint.com/sites/KG_CS_VA_HTM/Courses/Forms/AllItems.aspx?id=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FHTM130%20%2D%20Productivity%20and%20Comms%2FYYYY%5FMM%20Delivery&viewid=f46bbdd9%2D454c%2D4121%2Dacc1%2Db79c7c28c255&viewpath=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FForms%2FAllItems%2Easpx">Kilda Group Attendance Sheets</a></li>
+    <li>VA Student Course Content: <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM130-Course-Content.aspx">HTM130 Course Content</a></li>
+</ul>
+</section>
+
+<section class="lab-section" data-lab="HTM230: Team Communications and Conflict Resolution">
+  <h2>HTM230: Team Communications and Conflict Resolution</h2>
+  <h3>Class Structure</h3>
+  <p>Start - End Time: 10:00 AM - 4:00 PM EST<br>Number of Days: 1</p>
+  <p>Instructor(s): Paul McGuire (ForeSide LLC)<br>Instructor Contact Information: paul@foresideprojects.com; paul.mcguire.ctr@kildagroup.com</p>
+
+  <h3>Key Links</h3>
+  <ul>
+    <li>Attendance Sheet: <a href="https://kildagroup.sharepoint.com/sites/KG_CS_VA_HTM/Courses/Forms/AllItems.aspx?id=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FHTM230%20%2D%20Team%20Comms%20and%20Conflict%20Resolution%2FYYYY%5FMM%20Delivery&viewid=f46bbdd9%2D454c%2D4121%2Dacc1%2Db79c7c28c255&viewpath=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FForms%2FAllItems%2Easpx">Kilda Group Attendance Sheets</a></li>
+    <li>VA Student Course Content: <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM230-Course-Content.aspx">HTM230 Course Content</a></li>
+  </ul>
+
+</section>
+
+<section class="lab-section" data-lab="HTM250: Project Management Fundamentals">
+  <h2>HTM250: Project Management Fundamentals</h2>
+  <h3>Class Structure</h3>
+  <p>Start - End Time: 10:00 AM - 4:00 PM EST<br>Number of Days: 2</p>
+  <p>Instructor(s): Paul McGuire (ForeSide LLC)<br>Instructor Contact Information: paul@foresideprojects.com; paul.mcguire.ctr@kildagroup.com</p>
+
+  <h3>Key Links</h3>
+  <ul>
+    <li>Attendance Sheet: <a href="https://kildagroup.sharepoint.com/sites/KG_CS_VA_HTM/Courses/Forms/AllItems.aspx?id=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FHTM250%20%2D%20Project%20Management%20Fundamentals%2FYYYY%5FMM%20Delivery&viewid=f46bbdd9%2D454c%2D4121%2Dacc1%2Db79c7c28c255&viewpath=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FForms%2FAllItems%2Easpx">Kilda Group Attendance Sheets</a></li>
+    <li>VA Student Course Content: <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM250-Course-Content.aspx">HTM250 Course Content</a></li>
+</ul>
+</section>
+
+<section class="lab-section" data-lab="HTM114: Microsoft Power Platform Fundamentals">
+  <h2>HTM114: Microsoft Power Platform Fundamentals</h2>
+  <h3>Class Structure</h3>
+  <p>Start - End Time: 10:00 AM - 4:00 PM EST<br>Number of Days: 3</p>
+  <p>Instructor(s): Kevin Jeter<br>Instructor Contact Information: kevin.jeter@kildagroup.com</p>
+
+  <h3>Key Links</h3>
+  <ul>
+    <li>Attendance Sheet: <a href="https://kildagroup.sharepoint.com/sites/KG_CS_VA_HTM/Courses/Forms/AllItems.aspx?id=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FHTM114%20%2D%20Power%20Platform%20Fundamentals%2F%5FClasses&viewid=f46bbdd9%2D454c%2D4121%2Dacc1%2Db79c7c28c255&viewpath=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FForms%2FAllItems%2Easpx">Kilda Group Attendance Sheets</a></li>
+    <li>VA Student Course Content: <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM114-Course-Content.aspx">HTM114 Course Content</a></li>
+    <li>Online Resources Used: Wayground</li>
+  </ul>
+
+  <h3>Day 1 Class Structure and Introduction Script</h3>
+  <p>Good afternoon everyone – welcome to HTM114: Microsoft Power Platform Fundamentals.</p>
+  <p>We’re excited to have you all here. Before we get started, I need to cover a few items.</p>
+  <p>First, 90% attendance is required to get a completion certificate. You may have conflicts at some point – the key to ensuring you meet the 90% is by notifying me as soon as possible.</p>
+  <p>We take attendance at the beginning of each session. Please type your name in the chat for the first attendance!</p>
+  <p>This is a virtual class and what that means is that errors will pop-up on our side & on yours (construction takes you offline, bad weather, MS Teams decides not to work, etc.). Again, the common theme is communication. Troubleshooting starts with us! Send a message in the chat or shoot me an email. If you leave because of technical issues and do not tell me, you will be marked absent for a session.</p>
+  <ul>
+    <li>It’s hard in virtual classes to know, unless you speak up, if the information is sinking in. With an in-person class, we can see your blank stares & explain it in a different way. We don’t have that with virtual classes.</li>
+    <li>Please type a question in the chat or come off mute (when appropriate – i.e. not in the middle of a sentence) to ask a question.</li>
+    <li>Recording – we’ll be recording for your future viewing</li>
+  </ul>
+  <p>Overview of MS Teams, if you aren’t already familiar</p>
+  <ul>
+    <li>Raising your hand.</li>
+    <li>The chat button – Chat is informal, don’t worry about spelling, ask questions, use it!</li>
+    <li>Sharing your screen – right next the leave button – select the page you’d like to share.</li>
+  </ul>
+  <p>Finally before I hand it over to <<<the instructor>>>, let’s cover the Hatch Act. As a reminder, as members of the VA – we must adhere to the Hatch Act. Please keep all personal & political opinions to yourself.</p>
+  <p>Great. Please let me know if you have any additional questions and I’ll pass it over to <<<instructor>>> to get us started today.</p>
+
+  <h3>Day 2+ Class Structure</h3>
+  <p>[Details for Day 2 and beyond]</p>
+</section>
+
+<section class="lab-section" data-lab="HTM251: Agile Project Management">
+  <h2>HTM251: Agile Project Management</h2>
+  <h3>Class Structure</h3>
+  <p>Start - End Time: 9:00 AM - 4:00 PM EST<br>Number of Days: 2</p>
+  <p>Instructor(s): Kevin Jeter<br>Instructor Contact Information: kevin.jeter@kildagroup.com</p>
+
+  <h3>Key Links</h3>
+  <ul>
+    <li>Attendance Sheet: <a href="https://kildagroup.sharepoint.com/sites/KG_CS_VA_HTM/Courses/Forms/AllItems.aspx?id=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FHTM251%20%2D%20Agile%20Project%20Management&viewid=f46bbdd9%2D454c%2D4121%2Dacc1%2Db79c7c28c255&viewpath=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FForms%2FAllItems%2Easpx">Kilda Group Attendance Sheets</a></li>
+    <li>VA Student Course Content: <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM251-Course-Content.aspx">HTM251 Course Content</a></li>
+    <li>VA Lab Document Links for Each Lab: <a href="https://kevin-jeter.github.io/HTM251Labs/">HTM251 Labs</a></li>
+    <li>Online Resources Used: wayground</li>
+  </ul>
+
+  <h3>Day 1 Class Structure and Introduction Script</h3>
+  <p>Good afternoon everyone – welcome to HTM251: Agile Project Management.</p>
+  <p>We’re excited to have you all here. Before we get started, I need to cover a few items.</p>
+  <p>First, 90% attendance is required to get a completion certificate. You may have conflicts at some point – the key to ensuring you meet the 90% is by notifying me as soon as possible.</p>
+  <p>We take attendance at the beginning of each session. Please type your name in the chat for the first attendance!</p>
+  <p>This is a virtual class and what that means is that errors will pop-up on our side & on yours (construction takes you offline, bad weather, MS Teams decides not to work, etc.). Again, the common theme is communication. Troubleshooting starts with us! Send a message in the chat or shoot me an email. If you leave because of technical issues and do not tell me, you will be marked absent for a session.</p>
+  <ul>
+    <li>It’s hard in virtual classes to know, unless you speak up, if the information is sinking in. With an in-person class, we can see your blank stares & explain it in a different way. We don’t have that with virtual classes.</li>
+    <li>Please type a question in the chat or come off mute (when appropriate – i.e. not in the middle of a sentence) to ask a question.</li>
+    <li>Recording – we’ll be recording for your future viewing</li>
+  </ul>
+  <p>Overview of MS Teams, if you aren’t already familiar</p>
+  <ul>
+    <li>Raising your hand.</li>
+    <li>The chat button – Chat is informal, don’t worry about spelling, ask questions, use it!</li>
+    <li>Sharing your screen – right next the leave button – select the page you’d like to share.</li>
+  </ul>
+  <p>Finally before I hand it over to <<<the instructor>>>, let’s cover the Hatch Act. As a reminder, as members of the VA – we must adhere to the Hatch Act. Please keep all personal & political opinions to yourself.</p>
+  <p>Great. Please let me know if you have any additional questions and I’ll pass it over to <<<instructor>>> to get us started today.</p>
+
+  <h3>Day 2+ Class Structure</h3>
+  <p>[Details for Day 2]</p>
+</section>
+
+<section class="lab-section" data-lab="HTM311: DICOM Fundamentals">
+  <h2>HTM311: DICOM Fundamentals</h2>
+  <h3>Class Structure</h3>
+  <p>Start - End Time: 10:00 AM - 4:00 PM EST<br>Number of Days: 3</p>
+  <p>Instructor(s): Laurie LeFleur<br>Instructor Contact Information: Laurie@reimaginehealthit.com</p>
+
+  <h3>Key Links</h3>
+  <ul>
+    <li>Attendance Sheet: <a href="https://kildagroup.sharepoint.com/sites/KG_CS_VA_HTM/Courses/Forms/AllItems.aspx?id=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FHTM311%20%2D%20DICOM%20Fundamentals%2FYYYY%5FMM%20Delivery&viewid=f46bbdd9%2D454c%2D4121%2Dacc1%2Db79c7c28c255&viewpath=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FForms%2FAllItems%2Easpx">Kilda Group Attendance Sheets</a></li>
+    <li>VA Student Course Content: <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM311-Course-Content.aspx">HTM311 Course Content</a></li>
+    <li>Online Resources Used: Amazon Workspaces (see Quiz and Software Resources section)</li>
+  </ul>
+
+  <h3>Day 1 Class Structure and Introduction Script</h3>
+  <p>Good afternoon everyone – welcome to HTM311: DICOM Fundamentals.</p>
+  <p>We’re excited to have you all here. Before we get started, I need to cover a few items.</p>
+  <p>First, 90% attendance is required to get a completion certificate. You may have conflicts at some point – the key to ensuring you meet the 90% is by notifying me as soon as possible.</p>
+  <p>We take attendance at the beginning of each session. Please type your name in the chat for the first attendance!</p>
+  <p>This is a virtual class and what that means is that errors will pop-up on our side & on yours (construction takes you offline, bad weather, MS Teams decides not to work, etc.). Again, the common theme is communication. Troubleshooting starts with us! Send a message in the chat or shoot me an email. If you leave because of technical issues and do not tell me, you will be marked absent for a session.</p>
+  <ul>
+    <li>It’s hard in virtual classes to know, unless you speak up, if the information is sinking in. With an in-person class, we can see your blank stares & explain it in a different way. We don’t have that with virtual classes.</li>
+    <li>Please type a question in the chat or come off mute (when appropriate – i.e. not in the middle of a sentence) to ask a question.</li>
+    <li>Recording – we’ll be recording for your future viewing</li>
+  </ul>
+  <p>Overview of MS Teams, if you aren’t already familiar</p>
+  <ul>
+    <li>Raising your hand.</li>
+    <li>The chat button – Chat is informal, don’t worry about spelling, ask questions, use it!</li>
+    <li>Sharing your screen – right next the leave button – select the page you’d like to share.</li>
+  </ul>
+  <p>Finally before I hand it over to <<<the instructor>>>, let’s cover the Hatch Act. As a reminder, as members of the VA – we must adhere to the Hatch Act. Please keep all personal & political opinions to yourself.</p>
+  <p>Great. Please let me know if you have any additional questions and I’ll pass it over to <<<instructor>>> to get us started today.</p>
+
+  <h3>Day 2+ Class Structure</h3>
+  <p>[Details for Day 2 and 3]</p>
+</section>
+
+<section class="lab-section" data-lab="HTM312: Introduction to HL7">
+  <h2>HTM312: Introduction to HL7</h2>
+  <h3>Class Structure</h3>
+  <p>Start - End Time: 10:00 AM - 4:00 PM EST<br>Number of Days: 2</p>
+  <p>Instructor(s): Laurie LeFleur<br>Instructor Contact Information: Laurie@reimaginehealthit.com</p>
+
+  <h3>Key Links</h3>
+  <ul>
+    <li>Attendance Sheet: <a href="https://kildagroup.sharepoint.com/sites/KG_CS_VA_HTM/Courses/Forms/AllItems.aspx?id=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FHTM312%20%2D%20Intro%20to%20HL7%2FYYYY%5FMM%20Delivery&viewid=f46bbdd9%2D454c%2D4121%2Dacc1%2Db79c7c28c255&viewpath=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FForms%2FAllItems%2Easpx">Kilda Group Attendance Sheets</a></li>
+    <li>VA Student Course Content: <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM312-Course-Content.aspx">HTM312 Course Content</a></li>
+    <li>Online Resources Used: Amazon Workspaces (see Quiz and Software Resources section)</li>
+  </ul>
+
+  <h3>Day 1 Class Structure and Introduction Script</h3>
+  <p>Good afternoon everyone – welcome to HTM312: Introduction to HL7.</p>
+  <p>We’re excited to have you all here. Before we get started, I need to cover a few items.</p>
+  <p>First, 90% attendance is required to get a completion certificate. You may have conflicts at some point – the key to ensuring you meet the 90% is by notifying me as soon as possible.</p>
+  <p>We take attendance at the beginning of each session. Please type your name in the chat for the first attendance!</p>
+  <p>This is a virtual class and what that means is that errors will pop-up on our side & on yours (construction takes you offline, bad weather, MS Teams decides not to work, etc.). Again, the common theme is communication. Troubleshooting starts with us! Send a message in the chat or shoot me an email. If you leave because of technical issues and do not tell me, you will be marked absent for a session.</p>
+  <ul>
+    <li>It’s hard in virtual classes to know, unless you speak up, if the information is sinking in. With an in-person class, we can see your blank stares & explain it in a different way. We don’t have that with virtual classes.</li>
+    <li>Please type a question in the chat or come off mute (when appropriate – i.e. not in the middle of a sentence) to ask a question.</li>
+    <li>Recording – we’ll be recording for your future viewing</li>
+  </ul>
+  <p>Overview of MS Teams, if you aren’t already familiar</p>
+  <ul>
+    <li>Raising your hand.</li>
+    <li>The chat button – Chat is informal, don’t worry about spelling, ask questions, use it!</li>
+    <li>Sharing your screen – right next the leave button – select the page you’d like to share.</li>
+  </ul>
+  <p>Finally before I hand it over to <<<the instructor>>>, let’s cover the Hatch Act. As a reminder, as members of the VA – we must adhere to the Hatch Act. Please keep all personal & political opinions to yourself.</p>
+  <p>Great. Please let me know if you have any additional questions and I’ll pass it over to <<<instructor>>> to get us started today.</p>
+
+  <h3>Day 2+ Class Structure</h3>
+  <p>[Details for Day 2]</p>
+</section>
 
   </main>
+  <script>
+    function filterLabs() {
+      const filter = document.getElementById('labFilter').value;
+      const sections = document.querySelectorAll('.lab-section');
+      sections.forEach(sec => {
+        if (filter === '' || sec.dataset.lab === filter) {
+          sec.classList.add('active');
+        } else {
+          sec.classList.remove('active');
+        }
+      });
+    }
+
+    const themeToggle = document.getElementById('theme-toggle');
+    themeToggle.addEventListener('change', () => {
+      if (themeToggle.checked) {
+        document.body.classList.remove('light');
+        document.body.classList.add('dark');
+      } else {
+        document.body.classList.remove('dark');
+        document.body.classList.add('light');
+      }
+    });
+  </script>
 </body>
 </html>
