@@ -153,6 +153,7 @@
         <option value="User Guide">User Guide</option>
         <option value="Moderator Checklist">Moderator Checklist</option>
         <option value="Quiz and Software Resources">Quiz and Software Resources</option>
+        <option value="Amazon Workspaces - Moderation and Troubleshooting">Amazon Workspaces - Moderation and Troubleshooting</option>
         <option value="Wayground - Quiz Platform Overview">Wayground - Quiz Platform Overview</option>
         <option value="HTM PS101: Patient Safety Fundamentals">HTM PS101: Patient Safety Fundamentals</option>
         <option value="HTM111: Introduction to HTM Cybersecurity">HTM111: Introduction to HTM Cybersecurity</option>
@@ -929,6 +930,109 @@
     <li>The final note is to see the actual analytics per question. Just simply click on the question to see how students were answering it.
         <img src="Moderation/Wayground_1.8.png" style="max-width: 100%;">
   </ol>
+</section>
+
+<section class="lab-section" data-lab="Amazon Workspaces - Moderation and Troubleshooting">
+  <h2>Amazon Workspaces Moderation</h2>
+  <p>Every class that uses AWS has a few similarities. They are listed below.</p>
+    <ul>
+        <li>Students will be given a username and password to log into their AWS Workspace. You can find this in the respective class Course Content on the VA Side</li>
+        <li>Students will NEVER need to download the Amazon Workspaces Client Application to access their workspace</li>
+        <li>Students Registration Codes and Passwords are NOT unique (all will be exactly the same)</li>
+        <li>Students Usernames are ALWAYS unique. Please refer to the Excel Spreadsheet in the VA Course Content for their respective Usernames</li>
+        <li>Most errors are user-based, not Amazon-based. Always start with having them screenshare to see what could be wrong.</li>
+    </ul>
+  <p>As a moderator, your role is to help students troubleshoot any issues they have logging into or using their AWS Workspace during class. The most common issues and their solutions are listed below.</p>
+  <h2>AWS Troubleshooting Guide</h2>
+  <p>The most common issues with AWS are user error or slow connections.</p>
+  <p>Start by asking what username the student is using and what error messages they see, if any. It might also help to ask for a screenshot or for the student to share their screen. Then, find the corresponding error below. Follow the steps until the issue is resolved.</p>
+  <p>How to Reboot and How to Assign a New Workspace are at the top of this document. It is best practice to reassign a workspace when you reboot in the middle of a lab or when a student has multiple issues with a workspace. If you are ever unsure of what to do, assign a new workspace.</p>
+  <p>You will need to be logged in to the AWS Management Console to check on the status of workspaces and reboot as needed. You will also need to have the AWS Login Information sheet for the course open to track assigned usernames.</p>
+  <p>A normal workspace will look like this:</p>
+  <img src="Moderation/AWS_1.1.png" style="max-width: 100%;">
+
+  <h3>How To Reboot</h3>
+  <ol class="checklist">
+    <li>Log in to Account ID: 566937488447</li>
+    <li>Search for “WorkSpaces” in search bar</li>
+    <li>Select first option</li>
+    <li>Click “Workspaces”</li>
+  </ol>
+  <p>A full list of all created workspaces should look like this</p>
+  <img src="Moderation/AWS_1.2.png" style="max-width: 100%;">
+  <ol class="checklist" start="5">
+    <li>Select the workspace you need to reboot by clicking on the checkbox for that row. You can select multiple spaces at once, or click the checkbox in the column to select all visible on the page</li>
+    <li>Once you select workspaces, options will be available along the top. Select “Reboot” from these option</li>
+  </ol>
+  <p>While rebooting, the status will look like this</p>
+  <img src="Moderation/AWS_1.3.png" style="max-width: 100%;">
+  <p>Let the student know their space is rebooting. Ask them to wait five minutes and then try logging in again</p>
+
+  <h3>How to Assign a New Workspace</h3>
+  <p>When setting up AWS for a course, extra spaces will always be created as a backup. These spaces are listed at the bottom of the AWS Login Information sheet sent to students. They are usually unmarked and with lots of blank rows between them and the assigned workspaces to avoid students looking at them.</p>
+  <ol class="checklist">
+    <li>Find an available backup space from the list</li>
+    <li>Double check that it’s working properly by logging in and checking on its status in the management console</li>
+    <li>Let the student know in the chat that you’re assigning them to this new workspace</li>
+  </ol>
+  <p>Ex. “Please switch to HTM50 for the remainder of the class”</p>
+  <ol class="checklist" start="4">
+    <li>In the AWS Login Information sheet, change the student’s username to the newly assigned space</li>
+    <li>Move their original username to the bottom, in a separate column from the available spaces</li>
+    <li>Troubleshoot as time permits</li>
+  </ol>
+
+  <h3>The Username a Student Gives Doesn’t Match their Assigned Username</h3>
+  <p>Only one person can log into a workspace at one time. If the student is using a different username than what they were assigned, this will cause issues both for them and for the other student who is assigned to that space.</p>
+  <p>Remind the student what their actual username is</p>
+
+  <h3>Invalid Registration Code</h3>
+  <p>Most likely there is some issue with the copy/paste.</p>
+  <p>Ask student to type out registration code instead of pasting into AWS</p>
+
+  <h3>Invalid Username/Password</h3>
+  <p>Same as above, AWS just doesn’t like pasted values sometimes.</p>
+  <p>Ask student to type out username and password instead of pasting</p>
+  <p>If error persists, check they have the correct credentials</p>
+  <p>Some students will also attempt to login to the Amazon Workspace App within their workspace. If their screen looks like either of these screenshots, ask them to close the internal workspace window</p>
+  <img src="Moderation/AWS_1.4.png" style="max-width: 100%;">
+  <img src="Moderation/AWS_1.5.png" style="max-width: 100%;">
+
+  <h3>“My Workspace is taking too long to log in”</h3>
+  <p>Check the health of their workspace on. If the status is “Unhealthy”, reboot the workspace</p>
+  <p>Let the student know they need to wait 5 minutes for the reboot to complete</p>
+  <p>Ask the student to close out of AWS, clear the cache and cookies on their browser, and try again</p>
+  <p>If problem persists, assign a new workspace</p>
+
+  <h3>ERROR_TYPE_CONNECTION</h3>
+  <p>This error can indicate that someone else has logged into the workspace, or that there was some connection issue while logging in, like the connection timed out.</p>
+  <p>Ask the student to close or refresh their browser then try again</p>
+  <p>If the error comes back:</p>
+  <ul class="checklist">
+    <li>Make sure the student isn’t logging in to the internal Amazon Workspace App within their workspace. If their screen looks like this, ask them to close the internal workspace window</li>
+  </ul>
+  <img src="Moderation/AWS_1.6.png" style="max-width: 100%;">
+  <ul class="checklist">
+    <li>Check the health of their workspace on If the status is “Unhealthy”, reboot the workspace</li>
+    <li>Let the student know they need to wait 5 minutes for the reboot to complete</li>
+    <li>If the status is “Available”, assign a new workspace</li>
+  </ul>
+
+  <h3>AWS is a black screen</h3>
+  <p>Immediately reboot the workspace. If error persists, assign a new workspace.</p>
+
+  <h3>“The Workspace is Very Slow / I can’t click or type / The screen is frozen”</h3>
+  <p>This might be caused by connectivity issues on the student’s side.</p>
+  <p>If at VA Facility, ensure they are NOT on the guest network & recommend obtaining a secondary device. If at home network, ensure they are NOT on VPN & recommend closing all tabs/other windows.</p>
+  <p>Ask student to refresh their browser and clear cache/cookies</p>
+  <p>Reboot the workspace</p>
+  <p>If issue persists, assign a new workspace</p>
+
+  <h3>It Looks Weird / MISC Errors</h3>
+  <p>If their screen looks like below, they logged into the Amazon Workspace App and crashed their actual workspace. You'll need either have them close all those Amazon Workspace windows or do it yourself via the AWS App</p>
+  <img src="Moderation/AWS_1.7.png" style="max-width: 100%;">
+  <p>“It keeps kicking me out”. This is vague and could be caused by several things like slow connection, someone else logging into the workspace, etc. Ask the student to share screen to troubleshoot further</p>
+  <p>ERR_SIG_TIMEOUT is another connection error. If at VA Facility, ensure they are NOT on the guest network & recommend obtaining a secondary device. If at home network, ensure they are NOT on VPN & recommend closing all tabs/other windows.</p>
 </section>
 
   </main>
