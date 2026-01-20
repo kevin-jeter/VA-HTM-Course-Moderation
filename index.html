@@ -11,7 +11,6 @@
       --accent: #cce5ff;
       --gray-border: #dee2e6;
     }
-
     body.light {
       --bg-light: #ffffff;
       --text-dark: #000000;
@@ -23,7 +22,6 @@
       --image-border: #808080;
       --gray-border: #adb5bd;
     }
-
     body.dark {
       --bg-light: #1c1e21;
       --text-dark: #e9ecef;
@@ -47,7 +45,6 @@
         color: #cccccc;
       }
     }
-
     body {
       font-family: 'Segoe UI', sans-serif;
       font-size: 12pt;
@@ -57,12 +54,10 @@
       color: var(--text-dark);
       transition: background 0.3s ease, color 0.3s ease;
     }
-
     h1, h2, h3 { color: var(--primary); margin-bottom: 10px; }
     h1 { font-size: 24pt; }
     h2 { font-size: 18pt; }
     h3 { font-size: 14pt; }
-
     .header, .footer {
       background-color: var(--header-bg);
       color: white;
@@ -76,7 +71,6 @@
        margin: 0;
       color: white;
     }
-
     .card {
       background: var(--card-bg);
       padding: 10px;
@@ -86,7 +80,6 @@
       transition: none;
     }
     .card:hover { box-shadow: none; transform: none; }
-
     .lab-section {
       display: none;
       background: var(--card-bg);
@@ -99,18 +92,13 @@
       transition: none;
     }
     .lab-section.active { display: block; }
-
     @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-
     .styled-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 12pt; background-color: var(--card-bg); color: var(--text-dark); }
     .styled-table th, .styled-table td { border: 1px solid var(--gray-border); padding: 10px; vertical-align: top; text-align: left; }
     .styled-table thead th { background-color: var(--table-head-bg); }
     .styled-table tbody tr:nth-child(even) { background-color: var(--table-alt-row-bg); }
-
     img { display: block; margin-top: 10px; max-width: 40%; height: auto; border: 1px solid var(--image-border); border-radius: 4px; }
-
     .filter-bar { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
-
     .theme-switch { display: flex; align-items: center; gap: 10px; cursor: pointer; user-select: none; }
     .theme-switch input { display: none; }
     .theme-switch .slider { width: 40px; height: 20px; background-color: #ccc; border-radius: 20px; position: relative; transition: background-color 0.3s ease; }
@@ -118,14 +106,10 @@
     .theme-switch input:checked + .slider { background-color: var(--primary); }
     .theme-switch input:checked + .slider::before { transform: translateX(20px); }
     .switch-label { font-size: 0.9rem; color: var(--text-dark); }
-
     .toggle-button { background-color: var(--primary); color: white; border: none; padding: 8px 12px; border-radius: 4px; font-size: 0.95rem; cursor: pointer; margin: 10px 0; transition: background-color 0.3s ease; }
     .toggle-button:hover { background-color: #003d7a; }
-
     .callout { border-left: 4px solid var(--primary); background: var(--table-alt-row-bg); padding: 10px 12px; border-radius: 6px; margin: 10px 0; }
-
     .container { max-width: none; margin: 0; }
-
     input[type="text"],
     select {
       background-color: var(--input-bg);
@@ -136,7 +120,6 @@
       box-sizing: border-box;
       transition: background-color 0.3s ease, color 0.3s ease;
     }
-
     .checklist {
       list-style-type: none;
       padding-left: 0;
@@ -181,19 +164,16 @@
         <option value="HTM403: HTM Leadership Development">HTM403: HTM Leadership Development</option>
       </select>
     </div>
-
     <label class="theme-switch">
       <input type="checkbox" id="theme-toggle">
       <span class="slider"></span>
       <span class="switch-label">Dark Mode</span>
     </label>
-
     <section class="lab-section active" data-lab="User Guide">
       <h2>User Guide</h2>
       <p>Welcome to the HTM Moderator Guide. This guide is designed to provide links, resources, and instructions to help you effectively moderate all HTM Courses.</p>
       <p>As a moderator, you will have access to various tools and resources to assist you in your role. Please refer to the sections below for detailed information on each lab and its associated resources.</p>
     </section>
-
     <section class="lab-section" data-lab="Moderator Checklist">
       <h2>Moderator Checklist</h2>
       <h3>Basic Structure</h3>
@@ -253,7 +233,6 @@
       </ul>
       <div class="callout">Tip: Follow this checklist meticulously to ensure a smooth and engaging class session.</div>
     </section>
-
     <section class="lab-section" data-lab="HTM PS101: Patient Safety Fundamentals">
   <h2>HTM PS101: Patient Safety Fundamentals</h2>
   <h3>Class Structure</h3>
@@ -261,14 +240,12 @@
   <br>Number of Days: 3</p>
   <p>Instructor(s): Multiple; Paul McGuire
   <br>Instructor Contact Information: paul.mcguire@kildagroup.com</p>
-
   <h3>Key Links</h3>
   <ul>
     <li>Attendance Sheet: <a href="https://kildagroup.sharepoint.com/sites/KG_CS_VA_HTM/Courses/Forms/AllItems.aspx?id=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FHTM111%20%2D%20Intro%20to%20Cyber%2FYYYY%5FMM%20Delivery&viewid=f46bbdd9%2D454c%2D4121%2Dacc1%2Db79c7c28c255&viewpath=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FForms%2FAllItems%2Easpx">Kilda Group Attendance Sheets</a></li>
     <li>VA Student Course Content: <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM-PS101-Course-Content.aspx">HTM PS101 Course Content</a></li>
     <li>Online Resources Used: N/A</li>
   </ul>
-
   <h3>Day 1 Class Structure and Introduction Script</h3>
   <p>Good afternoon everyone – welcome to HTM111: Introduction to HTM Cybersecurity.</p>
   <p>We’re excited to have you all here. Before we get started, I need to cover a few items.</p>
@@ -288,11 +265,16 @@
   </ul>
   <p>Finally before I hand it over to <<<the instructor>>>, let’s cover the Hatch Act. As a reminder, as members of the VA – we must adhere to the Hatch Act. Please keep all personal & political opinions to yourself.</p>
   <p>Great. Please let me know if you have any additional questions and I’ll pass it over to <<<instructor>>> to get us started today.</p>
-
   <h3>Day 2+ Class Structure</h3>
   <p>N/A (1-day course)</p>
+<h3>Course Completion Survey</h3>
+<p>Course Completion Surveys are mandatory for each class.</p>
+<ol>
+<li>Navigate to the Group Forms.</li>
+<li>Find the last form and create a copy.</li>
+<li>Share the copy with the class at the end of the last day.</li>
+</ol>
 </section>
-
     <section class="lab-section" data-lab="HTM111: Introduction to HTM Cybersecurity">
   <h2>HTM111: Introduction to HTM Cybersecurity</h2>
   <h3>Class Structure</h3>
@@ -300,14 +282,12 @@
   <br>Number of Days: 1</p>
   <p>Instructor(s): Brett Glines
   <br>Instructor Contact Information: lbglines@outlook.com; brett@kildagroup.com; lbgw@outlook.com</p>
-
   <h3>Key Links</h3>
   <ul>
     <li>Attendance Sheet: <a href="https://kildagroup.sharepoint.com/sites/KG_CS_VA_HTM/Courses/Forms/AllItems.aspx?id=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FHTM111%20%2D%20Intro%20to%20Cyber%2FYYYY%5FMM%20Delivery&viewid=f46bbdd9%2D454c%2D4121%2Dacc1%2Db79c7c28c255&viewpath=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FForms%2FAllItems%2Easpx">Kilda Group Attendance Sheets</a></li>
     <li>VA Student Course Content: <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM111-Course-Content.aspx">HTM111 Course Content</a></li>
     <li>Online Resources Used: None</li>
   </ul>
-
   <h3>Day 1 Class Structure and Introduction Script</h3>
   <p>Good morning everyone – welcome to HTM111: Introduction to HTM Cybersecurity.</p>
   <p>We’re excited to have you all here. Before we get started, I need to cover a few items.</p>
@@ -327,21 +307,25 @@
   </ul>
   <p>Finally before I hand it over to Brett, let’s cover the Hatch Act. As a reminder, as members of the VA – we must adhere to the Hatch Act. Please keep all personal & political opinions to yourself.</p>
   <p>Great. Please let me know if you have any additional questions and I’ll pass it over to Brett to get us started today.</p>
+<h3>Course Completion Survey</h3>
+<p>Course Completion Surveys are mandatory for each class.</p>
+<ol>
+<li>Navigate to the Group Forms.</li>
+<li>Find the last form and create a copy.</li>
+<li>Share the copy with the class at the end of the last day.</li>
+</ol>
 </section>
-
 <section class="lab-section" data-lab="HTM112: Basic Networking Course">
   <h2>HTM112: Basic Networking Course</h2>
   <h3>Class Structure</h3>
   <p>Start - End Time: 9:00 AM - 6:00 PM EST<br>Number of Days: 5</p>
   <p>Instructor(s): Brett Glines<br>Instructor Contact Information: lbglines@outlook.com; brett@kildagroup.com; lbgw@outlook.com</p>
-
   <h3>Key Links</h3>
   <ul>
     <li>Attendance Sheet: <a href="https://kildagroup.sharepoint.com/sites/KG_CS_VA_HTM/Courses/Forms/AllItems.aspx?id=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FHTM112%20%2D%20Basic%20Networking%2FYYYY%5FMM%20Delivery&viewid=f46bbdd9%2D454c%2D4121%2Dacc1%2Db79c7c28c255&viewpath=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FForms%2FAllItems%2Easpx">Kilda Group Attendance Sheets</a></li>
     <li>VA Student Course Content: <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM112-Course-Content.aspx">HTM112 Course Content</a></li>
     <li>Online Resources Used: Amazon Workspaces (see Quiz and Software Resources section)</li>
   </ul>
-
   <h3>Day 1 Class Structure and Introduction Script</h3>
   <p>Good morning everyone – welcome to HTM112: Basic Networking Course.</p>
   <p>We’re excited to have you all here. Before we get started, I need to cover a few items.</p>
@@ -368,58 +352,25 @@
     <li>15-minute break at 3:00 PM</li>
   </ul>
   <p>Day 5 (Friday): Morning lecture by VA SME</p>
+<h3>Course Completion Survey</h3>
+<p>Course Completion Surveys are mandatory for each class.</p>
+<ol>
+<li>Navigate to the Group Forms.</li>
+<li>Find the last form and create a copy.</li>
+<li>Share the copy with the class at the end of the last day.</li>
+</ol>
 </section>
-
-<section class="lab-section" data-lab="HTM211: Introduction to Operating Systems & SQL">
-  <h2>HTM211: Introduction to Operating Systems & SQL</h2>
-  <h3>Class Structure</h3>
-  <p>Start - End Time: 9:00 AM - 6:00 PM EST<br>Number of Days: 2</p>
-  <p>Instructor(s): Brett Glines<br>Instructor Contact Information: lbglines@outlook.com; brett@kildagroup.com; lbgw@outlook.com</p>
-
-  <h3>Key Links</h3>
-  <ul>
-    <li>Attendance Sheet: <a href="https://kildagroup.sharepoint.com/sites/KG_CS_VA_HTM/Courses/Forms/AllItems.aspx?id=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FHTM211%20%2D%20Intro%20to%20OS%20%26%20SQL%2FYYYY%5FMM%20Delivery&viewid=f46bbdd9%2D454c%2D4121%2Dacc1%2Db79c7c28c255&viewpath=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FForms%2FAllItems%2Easpx">Kilda Group Attendance Sheets</a></li>
-    <li>VA Student Course Content: <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM211-Course-Content.aspx">HTM211 Course Content</a></li>
-    <li>Online Resources Used: Amazon Workspaces (see Quiz and Software Resources section)</li>
-  </ul>
-
-  <h3>Day 1 Class Structure and Introduction Script</h3>
-  <p>Good afternoon everyone – welcome to HTM211: Introduction to Operating Systems & SQL.</p>
-  <p>We’re excited to have you all here. Before we get started, I need to cover a few items.</p>
-  <p>First, 90% attendance is required to get a completion certificate. You may have conflicts at some point – the key to ensuring you meet the 90% is by notifying me as soon as possible.</p>
-  <p>We take attendance at the beginning of each session. Please type your name in the chat for the first attendance!</p>
-  <p>This is a virtual class and what that means is that errors will pop-up on our side & on yours (construction takes you offline, bad weather, MS Teams decides not to work, etc.). Again, the common theme is communication. Troubleshooting starts with us! Send a message in the chat or shoot me an email. If you leave because of technical issues and do not tell me, you will be marked absent for a session.</p>
-  <ul>
-    <li>It’s hard in virtual classes to know, unless you speak up, if the information is sinking in. With an in-person class, we can see your blank stares & explain it in a different way. We don’t have that with virtual classes.</li>
-    <li>Please type a question in the chat or come off mute (when appropriate – i.e. not in the middle of a sentence) to ask a question.</li>
-    <li>Recording – we’ll be recording for your future viewing</li>
-  </ul>
-  <p>Overview of MS Teams, if you aren’t already familiar</p>
-  <ul>
-    <li>Raising your hand.</li>
-    <li>The chat button – Chat is informal, don’t worry about spelling, ask questions, use it!</li>
-    <li>Sharing your screen – right next the leave button – select the page you’d like to share.</li>
-  </ul>
-  <p>Finally before I hand it over to <<<the instructor>>>, let’s cover the Hatch Act. As a reminder, as members of the VA – we must adhere to the Hatch Act. Please keep all personal & political opinions to yourself.</p>
-  <p>Great. Please let me know if you have any additional questions and I’ll pass it over to <<<instructor>>> to get us started today.</p>
-
-  <h3>Day 2+ Class Structure</h3>
-  <p>[Details for Day 2]</p>
-</section>
-
 <section class="lab-section" data-lab="HTM212: Intermediate Networking">
   <h2>HTM212: Intermediate Networking</h2>
   <h3>Class Structure</h3>
   <p>Start - End Time: 9:00 AM - 6:00 PM EST<br>Number of Days: 2</p>
   <p>Instructor(s): Brett Glines<br>Instructor Contact Information: lbglines@outlook.com; brett@kildagroup.com; lbgw@outlook.com</p>
-
   <h3>Key Links</h3>
   <ul>
     <li>Attendance Sheet: <a href="https://kildagroup.sharepoint.com/sites/KG_CS_VA_HTM/Courses/Forms/AllItems.aspx?id=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FHTM212%20%2D%20Intermediate%20Networking%2FYYYY%5FMM%20Delivery&viewid=f46bbdd9%2D454c%2D4121%2Dacc1%2Db79c7c28c255&viewpath=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FForms%2FAllItems%2Easpx">Kilda Group Attendance Sheets</a></li>
     <li>VA Student Course Content: <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM212-Course-Content.aspx">HTM212 Course Content</a></li>
     <li>Online Resources Used: Amazon Workspaces (see Quiz and Software Resources section)</li>
   </ul>
-
   <h3>Day 1 Class Structure and Introduction Script</h3>
   <p>Good afternoon everyone – welcome to HTM212: Intermediate Networking.</p>
   <p>We’re excited to have you all here. Before we get started, I need to cover a few items.</p>
@@ -439,24 +390,27 @@
   </ul>
   <p>Finally before I hand it over to <<<the instructor>>>, let’s cover the Hatch Act. As a reminder, as members of the VA – we must adhere to the Hatch Act. Please keep all personal & political opinions to yourself.</p>
   <p>Great. Please let me know if you have any additional questions and I’ll pass it over to <<<instructor>>> to get us started today.</p>
-
   <h3>Day 2+ Class Structure</h3>
   <p>[Details for Day 2]</p>
+<h3>Course Completion Survey</h3>
+<p>Course Completion Surveys are mandatory for each class.</p>
+<ol>
+<li>Navigate to the Group Forms.</li>
+<li>Find the last form and create a copy.</li>
+<li>Share the copy with the class at the end of the last day.</li>
+</ol>
 </section>
-
 <section class="lab-section" data-lab="HTM213: Introduction to Virtual Machines">
   <h2>HTM213: Introduction to Virtual Machines</h2>
   <h3>Class Structure</h3>
   <p>Start - End Time: 9:00 AM - 6:00 PM EST<br>Number of Days: 1</p>
   <p>Instructor(s): Brett Glines<br>Instructor Contact Information: lbglines@outlook.com; brett@kildagroup.com; lbgw@outlook.com</p>
-
   <h3>Key Links</h3>
   <ul>
     <li>Attendance Sheet: <a href="https://kildagroup.sharepoint.com/sites/KG_CS_VA_HTM/Courses/Forms/AllItems.aspx?id=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FHTM213%20%2D%20Intro%20to%20VMs%2FYYYY%5FMM%20Delivery&viewid=f46bbdd9%2D454c%2D4121%2Dacc1%2Db79c7c28c255&viewpath=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FForms%2FAllItems%2Easpx">Kilda Group Attendance Sheets</a></li>
     <li>VA Student Course Content: <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM213-Course-Content.aspx">HTM213 Course Content</a></li>
     <li>Online Resources Used: Amazon Workspaces (see Quiz and Software Resources section)</li>
   </ul>
-
   <h3>Day 1 Class Structure and Introduction Script</h3>
   <p>Good afternoon everyone – welcome to HTM213: Introduction to Virtual Machines.</p>
   <p>We’re excited to have you all here. Before we get started, I need to cover a few items.</p>
@@ -476,24 +430,27 @@
   </ul>
   <p>Finally before I hand it over to <<<the instructor>>>, let’s cover the Hatch Act. As a reminder, as members of the VA – we must adhere to the Hatch Act. Please keep all personal & political opinions to yourself.</p>
   <p>Great. Please let me know if you have any additional questions and I’ll pass it over to <<<instructor>>> to get us started today.</p>
-
   <h3>Day 2+ Class Structure</h3>
   <p>N/A (1-day course)</p>
+<h3>Course Completion Survey</h3>
+<p>Course Completion Surveys are mandatory for each class.</p>
+<ol>
+<li>Navigate to the Group Forms.</li>
+<li>Find the last form and create a copy.</li>
+<li>Share the copy with the class at the end of the last day.</li>
+</ol>
 </section>
-
 <section class="lab-section" data-lab="HTM115: Introduction to Windows Server Management">
   <h2>HTM115: Introduction to Windows Server Management</h2>
   <h3>Class Structure</h3>
   <p>Start - End Time: 9:00 AM - 6:00 PM EST<br>Number of Days: 1</p>
   <p>Instructor(s): Brett Glines<br>Instructor Contact Information: lbglines@outlook.com; brett@kildagroup.com; lbgw@outlook.com</p>
-
   <h3>Key Links</h3>
   <ul>
     <li>Attendance Sheet: <a href="https://kildagroup.sharepoint.com/sites/KG_CS_VA_HTM/Courses/Forms/AllItems.aspx?id=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FHTM115%20%2D%20Windows%20Server%2FYYYY%5FMM%20Delivery&viewid=f46bbdd9%2D454c%2D4121%2Dacc1%2Db79c7c28c255&viewpath=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FForms%2FAllItems%2Easpx">Kilda Group Attendance Sheets</a></li>
     <li>VA Student Course Content: <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM115-Course-Content.aspx">HTM115 Course Content</a></li>
     <li>Online Resources Used: Amazon Workspaces (see Quiz and Software Resources section)</li>
   </ul>
-
   <h3>Day 1 Class Structure and Introduction Script</h3>
   <p>Good afternoon everyone – welcome to HTM115: Introduction to Windows Server Management.</p>
   <p>We’re excited to have you all here. Before we get started, I need to cover a few items.</p>
@@ -513,24 +470,27 @@
   </ul>
   <p>Finally before I hand it over to <<<the instructor>>>, let’s cover the Hatch Act. As a reminder, as members of the VA – we must adhere to the Hatch Act. Please keep all personal & political opinions to yourself.</p>
   <p>Great. Please let me know if you have any additional questions and I’ll pass it over to <<<instructor>>> to get us started today.</p>
-
   <h3>Day 2+ Class Structure</h3>
   <p>N/A (1-day course)</p>
+<h3>Course Completion Survey</h3>
+<p>Course Completion Surveys are mandatory for each class.</p>
+<ol>
+<li>Navigate to the Group Forms.</li>
+<li>Find the last form and create a copy.</li>
+<li>Share the copy with the class at the end of the last day.</li>
+</ol>
 </section>
-
 <section class="lab-section" data-lab="HTM116: SQL Server Fundamentals">
   <h2>HTM116: SQL Server Fundamentals</h2>
   <h3>Class Structure</h3>
   <p>Start - End Time: 9:00 AM - 6:00 PM EST<br>Number of Days: 1</p>
   <p>Instructor(s): Brett Glines<br>Instructor Contact Information: lbglines@outlook.com; brett@kildagroup.com; lbgw@outlook.com</p>
-
   <h3>Key Links</h3>
   <ul>
     <li>Attendance Sheet: <a href="https://kildagroup.sharepoint.com/sites/KG_CS_VA_HTM/Courses/Forms/AllItems.aspx?id=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FHTM116%20%2D%20SQL%20Server%2FYYYY%5FMM%20Delivery&viewid=f46bbdd9%2D454c%2D4121%2Dacc1%2Db79c7c28c255&viewpath=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FForms%2FAllItems%2Easpx">Kilda Group Attendance Sheets</a></li>
     <li>VA Student Course Content: <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM116-Course-Content.aspx">HTM116 Course Content</a></li>
     <li>Online Resources Used: Amazon Workspaces (see Quiz and Software Resources section)</li>
   </ul>
-
   <h3>Day 1 Class Structure and Introduction Script</h3>
   <p>Good afternoon everyone – welcome to HTM116: SQL Server Fundamentals.</p>
   <p>We’re excited to have you all here. Before we get started, I need to cover a few items.</p>
@@ -550,21 +510,25 @@
   </ul>
   <p>Finally before I hand it over to <<<the instructor>>>, let’s cover the Hatch Act. As a reminder, as members of the VA – we must adhere to the Hatch Act. Please keep all personal & political opinions to yourself.</p>
   <p>Great. Please let me know if you have any additional questions and I’ll pass it over to <<<instructor>>> to get us started today.</p>
+<h3>Course Completion Survey</h3>
+<p>Course Completion Surveys are mandatory for each class.</p>
+<ol>
+<li>Navigate to the Group Forms.</li>
+<li>Find the last form and create a copy.</li>
+<li>Share the copy with the class at the end of the last day.</li>
+</ol>
 </section>
-
 <section class="lab-section" data-lab="HTM214: Intermediate Principles of HTM Cybersecurity">
   <h2>HTM214: Intermediate Principles of HTM Cybersecurity</h2>
   <h3>Class Structure</h3>
   <p>Start - End Time: 10:00 AM - 4:00 PM EST<br>Number of Days: 2</p>
   <p>Instructor(s): Brett Glines<br>Instructor Contact Information: lbglines@outlook.com; brett@kildagroup.com; lbgw@outlook.com</p>
-
   <h3>Key Links</h3>
   <ul>
     <li>Attendance Sheet: <a href="https://kildagroup.sharepoint.com/sites/KG_CS_VA_HTM/Courses/Forms/AllItems.aspx?id=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FHTM214%20%2D%20Principles%20of%20Cyber%2FYYYY%5FMM%20Delivery&viewid=f46bbdd9%2D454c%2D4121%2Dacc1%2Db79c7c28c255&viewpath=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FForms%2FAllItems%2Easpx">Kilda Group Attendance Sheets</a></li>
     <li>VA Student Course Content: <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM214-Course-Content.aspx">HTM214 Course Content</a></li>
     <li>Online Resources Used: N/A</li>
   </ul>
-
   <h3>Day 1 Class Structure and Introduction Script</h3>
   <p>Good afternoon everyone – welcome to HTM214: Intermediate Principles of HTM Cybersecurity.</p>
   <p>We’re excited to have you all here. Before we get started, I need to cover a few items.</p>
@@ -584,64 +548,81 @@
   </ul>
   <p>Finally before I hand it over to <<<the instructor>>>, let’s cover the Hatch Act. As a reminder, as members of the VA – we must adhere to the Hatch Act. Please keep all personal & political opinions to yourself.</p>
   <p>Great. Please let me know if you have any additional questions and I’ll pass it over to <<<instructor>>> to get us started today.</p>
-
   <h3>Day 2+ Class Structure</h3>
   <p>[Details for Day 2]</p>
+<h3>Course Completion Survey</h3>
+<p>Course Completion Surveys are mandatory for each class.</p>
+<ol>
+<li>Navigate to the Group Forms.</li>
+<li>Find the last form and create a copy.</li>
+<li>Share the copy with the class at the end of the last day.</li>
+</ol>
 </section>
-
 <section class="lab-section" data-lab="HTM130: Productivity & Communication Fundamentals">
   <h2>HTM130: Productivity & Communication Fundamentals</h2>
   <h3>Class Structure</h3>
   <p>Start - End Time: 10:00 AM - 4:00 PM EST<br>Number of Days: 1</p>
   <p>Instructor(s): Paul McGuire (ForeSide LLC)<br>Instructor Contact Information: paul@foresideprojects.com; paul.mcguire.ctr@kildagroup.com</p>
-
   <h3>Key Links</h3>
   <ul>
     <li>Attendance Sheet: <a href="https://kildagroup.sharepoint.com/sites/KG_CS_VA_HTM/Courses/Forms/AllItems.aspx?id=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FHTM130%20%2D%20Productivity%20and%20Comms%2FYYYY%5FMM%20Delivery&viewid=f46bbdd9%2D454c%2D4121%2Dacc1%2Db79c7c28c255&viewpath=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FForms%2FAllItems%2Easpx">Kilda Group Attendance Sheets</a></li>
     <li>VA Student Course Content: <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM130-Course-Content.aspx">HTM130 Course Content</a></li>
 </ul>
+<h3>Course Completion Survey</h3>
+<p>Course Completion Surveys are mandatory for each class.</p>
+<ol>
+<li>Navigate to the Group Forms.</li>
+<li>Find the last form and create a copy.</li>
+<li>Share the copy with the class at the end of the last day.</li>
+</ol>
 </section>
-
 <section class="lab-section" data-lab="HTM230: Team Communications and Conflict Resolution">
   <h2>HTM230: Team Communications and Conflict Resolution</h2>
   <h3>Class Structure</h3>
   <p>Start - End Time: 10:00 AM - 4:00 PM EST<br>Number of Days: 1</p>
   <p>Instructor(s): Paul McGuire (ForeSide LLC)<br>Instructor Contact Information: paul@foresideprojects.com; paul.mcguire.ctr@kildagroup.com</p>
-
   <h3>Key Links</h3>
   <ul>
     <li>Attendance Sheet: <a href="https://kildagroup.sharepoint.com/sites/KG_CS_VA_HTM/Courses/Forms/AllItems.aspx?id=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FHTM230%20%2D%20Team%20Comms%20and%20Conflict%20Resolution%2FYYYY%5FMM%20Delivery&viewid=f46bbdd9%2D454c%2D4121%2Dacc1%2Db79c7c28c255&viewpath=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FForms%2FAllItems%2Easpx">Kilda Group Attendance Sheets</a></li>
     <li>VA Student Course Content: <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM230-Course-Content.aspx">HTM230 Course Content</a></li>
   </ul>
-
+<h3>Course Completion Survey</h3>
+<p>Course Completion Surveys are mandatory for each class.</p>
+<ol>
+<li>Navigate to the Group Forms.</li>
+<li>Find the last form and create a copy.</li>
+<li>Share the copy with the class at the end of the last day.</li>
+</ol>
 </section>
-
 <section class="lab-section" data-lab="HTM250: Project Management Fundamentals">
   <h2>HTM250: Project Management Fundamentals</h2>
   <h3>Class Structure</h3>
   <p>Start - End Time: 10:00 AM - 4:00 PM EST<br>Number of Days: 2</p>
   <p>Instructor(s): Paul McGuire (ForeSide LLC)<br>Instructor Contact Information: paul@foresideprojects.com; paul.mcguire.ctr@kildagroup.com</p>
-
   <h3>Key Links</h3>
   <ul>
     <li>Attendance Sheet: <a href="https://kildagroup.sharepoint.com/sites/KG_CS_VA_HTM/Courses/Forms/AllItems.aspx?id=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FHTM250%20%2D%20Project%20Management%20Fundamentals%2FYYYY%5FMM%20Delivery&viewid=f46bbdd9%2D454c%2D4121%2Dacc1%2Db79c7c28c255&viewpath=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FForms%2FAllItems%2Easpx">Kilda Group Attendance Sheets</a></li>
     <li>VA Student Course Content: <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM250-Course-Content.aspx">HTM250 Course Content</a></li>
 </ul>
+<h3>Course Completion Survey</h3>
+<p>Course Completion Surveys are mandatory for each class.</p>
+<ol>
+<li>Navigate to the Group Forms.</li>
+<li>Find the last form and create a copy.</li>
+<li>Share the copy with the class at the end of the last day.</li>
+</ol>
 </section>
-
 <section class="lab-section" data-lab="HTM114: Microsoft Power Platform Fundamentals">
   <h2>HTM114: Microsoft Power Platform Fundamentals</h2>
   <h3>Class Structure</h3>
   <p>Start - End Time: 10:00 AM - 4:00 PM EST<br>Number of Days: 3</p>
   <p>Instructor(s): Kevin Jeter<br>Instructor Contact Information: kevin.jeter@kildagroup.com</p>
-
   <h3>Key Links</h3>
   <ul>
     <li>Attendance Sheet: <a href="https://kildagroup.sharepoint.com/sites/KG_CS_VA_HTM/Courses/Forms/AllItems.aspx?id=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FHTM114%20%2D%20Power%20Platform%20Fundamentals%2F%5FClasses&viewid=f46bbdd9%2D454c%2D4121%2Dacc1%2Db79c7c28c255&viewpath=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FForms%2FAllItems%2Easpx">Kilda Group Attendance Sheets</a></li>
     <li>VA Student Course Content: <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM114-Course-Content.aspx">HTM114 Course Content</a></li>
     <li>Online Resources Used: Wayground</li>
   </ul>
-
   <h3>Day 1 Class Structure and Introduction Script</h3>
   <p>Good afternoon everyone – welcome to HTM114: Microsoft Power Platform Fundamentals.</p>
   <p>We’re excited to have you all here. Before we get started, I need to cover a few items.</p>
@@ -661,17 +642,21 @@
   </ul>
   <p>Finally before I hand it over to <<<the instructor>>>, let’s cover the Hatch Act. As a reminder, as members of the VA – we must adhere to the Hatch Act. Please keep all personal & political opinions to yourself.</p>
   <p>Great. Please let me know if you have any additional questions and I’ll pass it over to <<<instructor>>> to get us started today.</p>
-
   <h3>Day 2+ Class Structure</h3>
   <p>[Details for Day 2 and beyond]</p>
+<h3>Course Completion Survey</h3>
+<p>Course Completion Surveys are mandatory for each class.</p>
+<ol>
+<li>Navigate to the Group Forms.</li>
+<li>Find the last form and create a copy.</li>
+<li>Share the copy with the class at the end of the last day.</li>
+</ol>
 </section>
-
 <section class="lab-section" data-lab="HTM251: Agile Project Management">
   <h2>HTM251: Agile Project Management</h2>
   <h3>Class Structure</h3>
   <p>Start - End Time: 9:00 AM - 4:00 PM EST<br>Number of Days: 2</p>
   <p>Instructor(s): Kevin Jeter<br>Instructor Contact Information: kevin.jeter@kildagroup.com</p>
-
   <h3>Key Links</h3>
   <ul>
     <li>Attendance Sheet: <a href="https://kildagroup.sharepoint.com/sites/KG_CS_VA_HTM/Courses/Forms/AllItems.aspx?id=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FHTM251%20%2D%20Agile%20Project%20Management&viewid=f46bbdd9%2D454c%2D4121%2Dacc1%2Db79c7c28c255&viewpath=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FForms%2FAllItems%2Easpx">Kilda Group Attendance Sheets</a></li>
@@ -679,7 +664,6 @@
     <li>VA Lab Document Links for Each Lab: <a href="https://kevin-jeter.github.io/HTM251Labs/">HTM251 Labs</a></li>
     <li>Online Resources Used: wayground</li>
   </ul>
-
   <h3>Day 1 Class Structure and Introduction Script</h3>
   <p>Good afternoon everyone – welcome to HTM251: Agile Project Management.</p>
   <p>We’re excited to have you all here. Before we get started, I need to cover a few items.</p>
@@ -699,24 +683,27 @@
   </ul>
   <p>Finally before I hand it over to <<<the instructor>>>, let’s cover the Hatch Act. As a reminder, as members of the VA – we must adhere to the Hatch Act. Please keep all personal & political opinions to yourself.</p>
   <p>Great. Please let me know if you have any additional questions and I’ll pass it over to <<<instructor>>> to get us started today.</p>
-
   <h3>Day 2+ Class Structure</h3>
   <p>[Details for Day 2]</p>
+<h3>Course Completion Survey</h3>
+<p>Course Completion Surveys are mandatory for each class.</p>
+<ol>
+<li>Navigate to the Group Forms.</li>
+<li>Find the last form and create a copy.</li>
+<li>Share the copy with the class at the end of the last day.</li>
+</ol>
 </section>
-
 <section class="lab-section" data-lab="HTM311: DICOM Fundamentals">
   <h2>HTM311: DICOM Fundamentals</h2>
   <h3>Class Structure</h3>
   <p>Start - End Time: 10:00 AM - 4:00 PM EST<br>Number of Days: 3</p>
-  <p>Instructor(s): Laurie LeFleur<br>Instructor Contact Information: Laurie@reimaginehealthit.com</p>
-
+  <p>Instructor(s): Laurie MbFleur<br>Instructor Contact Information: Laurie@reimaginehealthit.com</p>
   <h3>Key Links</h3>
   <ul>
     <li>Attendance Sheet: <a href="https://kildagroup.sharepoint.com/sites/KG_CS_VA_HTM/Courses/Forms/AllItems.aspx?id=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FHTM311%20%2D%20DICOM%20Fundamentals%2FYYYY%5FMM%20Delivery&viewid=f46bbdd9%2D454c%2D4121%2Dacc1%2Db79c7c28c255&viewpath=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FForms%2FAllItems%2Easpx">Kilda Group Attendance Sheets</a></li>
     <li>VA Student Course Content: <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM311-Course-Content.aspx">HTM311 Course Content</a></li>
     <li>Online Resources Used: Amazon Workspaces (see Quiz and Software Resources section)</li>
   </ul>
-
   <h3>Day 1 Class Structure and Introduction Script</h3>
   <p>Good afternoon everyone – welcome to HTM311: DICOM Fundamentals.</p>
   <p>We’re excited to have you all here. Before we get started, I need to cover a few items.</p>
@@ -736,24 +723,27 @@
   </ul>
   <p>Finally before I hand it over to <<<the instructor>>>, let’s cover the Hatch Act. As a reminder, as members of the VA – we must adhere to the Hatch Act. Please keep all personal & political opinions to yourself.</p>
   <p>Great. Please let me know if you have any additional questions and I’ll pass it over to <<<instructor>>> to get us started today.</p>
-
   <h3>Day 2+ Class Structure</h3>
   <p>[Details for Day 2 and 3]</p>
+<h3>Course Completion Survey</h3>
+<p>Course Completion Surveys are mandatory for each class.</p>
+<ol>
+<li>Navigate to the Group Forms.</li>
+<li>Find the last form and create a copy.</li>
+<li>Share the copy with the class at the end of the last day.</li>
+</ol>
 </section>
-
 <section class="lab-section" data-lab="HTM312: Introduction to HL7">
   <h2>HTM312: Introduction to HL7</h2>
   <h3>Class Structure</h3>
   <p>Start - End Time: 10:00 AM - 4:00 PM EST<br>Number of Days: 2</p>
   <p>Instructor(s): Laurie LeFleur<br>Instructor Contact Information: Laurie@reimaginehealthit.com</p>
-
   <h3>Key Links</h3>
   <ul>
     <li>Attendance Sheet: <a href="https://kildagroup.sharepoint.com/sites/KG_CS_VA_HTM/Courses/Forms/AllItems.aspx?id=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FHTM312%20%2D%20Intro%20to%20HL7%2FYYYY%5FMM%20Delivery&viewid=f46bbdd9%2D454c%2D4121%2Dacc1%2Db79c7c28c255&viewpath=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FForms%2FAllItems%2Easpx">Kilda Group Attendance Sheets</a></li>
     <li>VA Student Course Content: <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM312-Course-Content.aspx">HTM312 Course Content</a></li>
     <li>Online Resources Used: Amazon Workspaces (see Quiz and Software Resources section)</li>
   </ul>
-
   <h3>Day 1 Class Structure and Introduction Script</h3>
   <p>Good afternoon everyone – welcome to HTM312: Introduction to HL7.</p>
   <p>We’re excited to have you all here. Before we get started, I need to cover a few items.</p>
@@ -773,24 +763,27 @@
   </ul>
   <p>Finally before I hand it over to <<<the instructor>>>, let’s cover the Hatch Act. As a reminder, as members of the VA – we must adhere to the Hatch Act. Please keep all personal & political opinions to yourself.</p>
   <p>Great. Please let me know if you have any additional questions and I’ll pass it over to <<<instructor>>> to get us started today.</p>
-
   <h3>Day 2+ Class Structure</h3>
   <p>[Details for Day 2]</p>
+<h3>Course Completion Survey</h3>
+<p>Course Completion Surveys are mandatory for each class.</p>
+<ol>
+<li>Navigate to the Group Forms.</li>
+<li>Find the last form and create a copy.</li>
+<li>Share the copy with the class at the end of the last day.</li>
+</ol>
 </section>
-
 <section class="lab-section" data-lab="HTM301: Certified Biomedical Equipment Technician (CBET)">
   <h2>HTM301: Certified Biomedical Equipment Technician (CBET)</h2>
   <h3>Class Structure</h3>
   <p>Start - End Time: Tues & Thurs, 2:00 - 3:00 PM EST<br>14 Weeks Long</p>
-  <p>Instructor(s): Sam Mbassa<br>Instructor Contact Information: sam@kildagroup.com; sam@servicemode.com<br>Backup Instructor (Contract POC): Manny Jimenez<br>Backup Instructor Contact Information: manny@servicemode.com</p>
-
+  <p>Instructor(s): Sam Mb Mbassa<br>Instructor Contact Information: sam.mb@kildagroup.com; sam@servicemode.com<br>Backup Instructor (Contract POC): Manny Jimenez<br>Backup Instructor Contact Information: manny@servicemode.com</p>
   <h3>Key Links</h3>
   <ul>
     <li>Attendance Sheet: <a href="https://kildagroup.sharepoint.com/sites/KG_CS_VA_HTM/Courses/Forms/AllItems.aspx?id=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FHTM301%20%2D%20CBET%20Prep&viewid=f46bbdd9%2D454c%2D4121%2Dacc1%2Db79c7c28c255&ovuser=a70e4058%2Df9cb%2D4417%2D8a42%2D784bc2e274c3%2Ckevin%2Ejeter%40kildagroup%2Ecom&OR=Teams%2DHL&CT=1768920521443&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI0OS8yNTExMzAwMTMxMiIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D">Kilda Group Attendance Sheets</a></li>
     <li>VA Student Course Content: <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM301-Course-Content.aspx">HTM301 Course Content</a></li>
     <li>Online Resources Used: <a href="https://forms.office.com/Pages/DesignPagev2.aspx?groupid=3b88b149-9ad9-4fb8-a415-95c0292b4589">MS Forms</a></li>
   </ul>
-
   <h3>Day 1 Class Structure and Introduction Script</h3>
   <p>Good afternoon everyone – welcome to HTM301: Certified Biomedical Equipment Technician (CBET).</p>
   <p>We’re excited to have you all here. Before we get started, I need to cover a few items.</p>
@@ -804,7 +797,6 @@
   </ul>
   <p>Finally before I hand it over to <<<the instructor>>>, let’s cover the Hatch Act. As a reminder, as members of the VA – we must adhere to the Hatch Act. Please keep all personal & political opinions to yourself.</p>
   <p>Great. Please let me know if you have any additional questions and I’ll pass it over to <<<instructor>>> to get us started today.</p>
-
   <h3>Day 2+ Class Structure</h3>
   <p>For each class beyond Day 1, ensure you do the following at minimum 24 hour prior to class start</p>
     <li>Share the Quiz Link in the MS Teams Chat</li>
@@ -819,12 +811,12 @@
   </ol>
   <h3>CBET Test Taking Instructions</h3>
   <ol>
-    <li>On the <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM301-Course-Content.aspx">HTM301 Course Content</a> page, you will find the "Test & Voucher Registration Walkthrough" application. 
+    <li>On the <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM301-Course-Content.aspx">HTM301 Course Content</a> page, you will find the "Test & Voucher Registration Walkthrough" application.
     <img src="Moderation/Voucher_1.1.png" style="max-width: 100%;"></li>
     <li>Click the "+" sign in the top right corner and select "CBET" for Test Requested. Select "Create Request"
         <img src="Moderation/Voucher_1.2.png" style="max-width: 100%;">
     </li>
-    <li>Students will see a row with their requested test and Status: "Not Started". 
+    <li>Students will see a row with their requested test and Status: "Not Started".
         <img src="Moderation/Voucher_1.3.png" style="max-width: 100%;">
     </li>
     <li>The Program Office will verify that you selected the correct course and are eligible. Once you are approved, students should click into their record.
@@ -834,21 +826,25 @@
         <img src="Moderation/Voucher_1.5.png" style="max-width: 100%;">
     </li>
 </ol>
+<h3>Course Completion Survey</h3>
+<p>Course Completion Surveys are mandatory for each class.</p>
+<ol>
+<li>Navigate to the Group Forms.</li>
+<li>Find the last form and create a copy.</li>
+<li>Share the copy with the class at the end of the last day.</li>
+</ol>
 </section>
-
 <section class="lab-section" data-lab="HTM401: Certified Healthcare Technology Manager (CHTM)">
   <h2>HTM401: Certified Healthcare Technology Manager (CHTM)</h2>
   <h3>Class Structure</h3>
   <p>Start - End Time: Tues & Thurs, 2:00 - 3:00 PM EST<br>14 Weeks Long</p>
   <p>Instructor(s): Nathan Scholze<br>Instructor Contact Information: nscholze@cbet.edu</p>
-
   <h3>Key Links</h3>
   <ul>
     <li>Attendance Sheet: <a href="https://kildagroup.sharepoint.com/sites/KG_CS_VA_HTM/Courses/Forms/AllItems.aspx?id=%2Fsites%2FKG%5FCS%5FVA%5FHTM%2FCourses%2FHTM401%20%2D%20CHTM%20Prep&viewid=f46bbdd9%2D454c%2D4121%2Dacc1%2Db79c7c28c255&ovuser=a70e4058%2Df9cb%2D4417%2D8a42%2D784bc2e274c3%2Ckevin%2Ejeter%40kildagroup%2Ecom&OR=Teams%2DHL&CT=1768920521443&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI0OS8yNTExMzAwMTMxMiIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D">Kilda Group Attendance Sheets</a></li>
     <li>VA Student Course Content: <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM401-Course-Content.aspx">HTM401 Course Content</a></li>
     <li>Online Resources Used: <a href="https://forms.office.com/Pages/DesignPagev2.aspx?groupid=3b88b149-9ad9-4fb8-a415-95c0292b4589">MS Forms</a></li>
   </ul>
-
   <h3>Day 1 Class Structure and Introduction Script</h3>
   <p>Good afternoon everyone – welcome to HTM401: Certified Healthcare Technology Manager (CHTM).</p>
   <p>We’re excited to have you all here. Before we get started, I need to cover a few items.</p>
@@ -862,7 +858,6 @@
   </ul>
   <p>Finally before I hand it over to <<<the instructor>>>, let’s cover the Hatch Act. As a reminder, as members of the VA – we must adhere to the Hatch Act. Please keep all personal & political opinions to yourself.</p>
   <p>Great. Please let me know if you have any additional questions and I’ll pass it over to <<<instructor>>> to get us started today.</p>
-
   <h3>Day 2+ Class Structure</h3>
   <p>For each class beyond Day 1, ensure you do the following at minimum 24 hour prior to class start</p>
     <li>Share the Quiz Link in the MS Teams Chat</li>
@@ -877,12 +872,12 @@
   </ol>
   <h3>CHTM Test Taking Instructions</h3>
   <ol>
-    <li>On the <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM401-Course-Content.aspx">HTM401 Course Content</a> page, you will find the "Test & Voucher Registration Walkthrough" application. 
+    <li>On the <a href="https://dvagov.sharepoint.com/sites/HTMTE/SitePages/HTM401-Course-Content.aspx">HTM401 Course Content</a> page, you will find the "Test & Voucher Registration Walkthrough" application.
     <img src="Moderation/Voucher_1.1.png" style="max-width: 100%;"></li>
     <li>Click the "+" sign in the top right corner and select "CHTM" for Test Requested. Select "Create Request"
         <img src="Moderation/Voucher_1.2.png" style="max-width: 100%;">
     </li>
-    <li>Students will see a row with their requested test and Status: "Not Started". 
+    <li>Students will see a row with their requested test and Status: "Not Started".
         <img src="Moderation/Voucher_1.3.png" style="max-width: 100%;">
     </li>
     <li>The Program Office will verify that you selected the correct course and are eligible. Once you are approved, students should click into their record.
@@ -892,19 +887,25 @@
         <img src="Moderation/Voucher_1.5.png" style="max-width: 100%;">
     </li>
   </ol>
+<h3>Course Completion Survey</h3>
+<p>Course Completion Surveys are mandatory for each class.</p>
+<ol>
+<li>Navigate to the Group Forms.</li>
+<li>Find the last form and create a copy.</li>
+<li>Share the copy with the class at the end of the last day.</li>
+</ol>
 </section>
-
 <section class="lab-section" data-lab="Wayground - Quiz Platform Overview">
   <h2>Quiz and Software Resources</h2>
   <h3>Wayground Navigation and Usage for Tests</h3>
   <p>Wayground (formerly Quizizz) is an online platform for creating, hosting, and managing quizzes and tests. It is used in various HTM courses for assessments, practice tests, and interactive learning. Below are step-by-step instructions for moderators to navigate and use Wayground for creating and administering tests.</p>
-  
+ 
   <h4>Step 1: Accessing Wayground</h4>
   <ol>
     <li>Navigate to the Wayground website: <a href="https://wayground.com/">https://wayground.com/</a>.</li>
     <li>We have a Kilda Group account. If you need the login information, please ask one of the team members</li>
   </ol>
-  
+ 
   <h4>Step 2: Hosting and Administering the Test</h4>
   <ol>
     <li>From the Home dashboard, select "Library" on the left hand side.
@@ -918,7 +919,7 @@
     <li>Next, just select "Start Live Session." Click through all the screens (Continue in top right and then "Start Now"). No settings need to be adjusted.
         <img src="Moderation/Wayground_1.4.png" style="max-width: 100%;">
     </li>
-    <li>To share the link, click the "copy" icon next to the top step and paste in the MS Teams chat. This link includes the game code for students to join. Remember to remind students to NOT enter their real names! 
+    <li>To share the link, click the "copy" icon next to the top step and paste in the MS Teams chat. This link includes the game code for students to join. Remember to remind students to NOT enter their real names!
         <img src="Moderation/Wayground_1.5.png" style="max-width: 100%;">
     </li>
     <li>After most students have joined, click the "Start" button. When most have finished (90-95%+), select the "End Session" in the top right.
@@ -931,7 +932,6 @@
         <img src="Moderation/Wayground_1.8.png" style="max-width: 100%;">
   </ol>
 </section>
-
 <section class="lab-section" data-lab="Amazon Workspaces - Moderation and Troubleshooting">
   <h2>Amazon Workspaces Moderation</h2>
   <p>Every class that uses AWS has a few similarities. They are listed below.</p>
@@ -950,7 +950,6 @@
   <p>You will need to be logged in to the AWS Management Console to check on the status of workspaces and reboot as needed. You will also need to have the AWS Login Information sheet for the course open to track assigned usernames.</p>
   <p>A normal workspace will look like this:</p>
   <img src="Moderation/AWS_1.1.png" style="max-width: 100%;">
-
   <h3>How To Reboot</h3>
   <ol class="checklist">
     <li>Log in to Account ID: 566937488447</li>
@@ -967,7 +966,6 @@
   <p>While rebooting, the status will look like this</p>
   <img src="Moderation/AWS_1.3.png" style="max-width: 100%;">
   <p>Let the student know their space is rebooting. Ask them to wait five minutes and then try logging in again</p>
-
   <h3>How to Assign a New Workspace</h3>
   <p>When setting up AWS for a course, extra spaces will always be created as a backup. These spaces are listed at the bottom of the AWS Login Information sheet sent to students. They are usually unmarked and with lots of blank rows between them and the assigned workspaces to avoid students looking at them.</p>
   <ol class="checklist">
@@ -981,15 +979,12 @@
     <li>Move their original username to the bottom, in a separate column from the available spaces</li>
     <li>Troubleshoot as time permits</li>
   </ol>
-
   <h3>The Username a Student Gives Doesn’t Match their Assigned Username</h3>
   <p>Only one person can log into a workspace at one time. If the student is using a different username than what they were assigned, this will cause issues both for them and for the other student who is assigned to that space.</p>
   <p>Remind the student what their actual username is</p>
-
   <h3>Invalid Registration Code</h3>
   <p>Most likely there is some issue with the copy/paste.</p>
   <p>Ask student to type out registration code instead of pasting into AWS</p>
-
   <h3>Invalid Username/Password</h3>
   <p>Same as above, AWS just doesn’t like pasted values sometimes.</p>
   <p>Ask student to type out username and password instead of pasting</p>
@@ -997,13 +992,11 @@
   <p>Some students will also attempt to login to the Amazon Workspace App within their workspace. If their screen looks like either of these screenshots, ask them to close the internal workspace window</p>
   <img src="Moderation/AWS_1.4.png" style="max-width: 100%;">
   <img src="Moderation/AWS_1.5.png" style="max-width: 100%;">
-
   <h3>“My Workspace is taking too long to log in”</h3>
   <p>Check the health of their workspace on. If the status is “Unhealthy”, reboot the workspace</p>
   <p>Let the student know they need to wait 5 minutes for the reboot to complete</p>
   <p>Ask the student to close out of AWS, clear the cache and cookies on their browser, and try again</p>
   <p>If problem persists, assign a new workspace</p>
-
   <h3>ERROR_TYPE_CONNECTION</h3>
   <p>This error can indicate that someone else has logged into the workspace, or that there was some connection issue while logging in, like the connection timed out.</p>
   <p>Ask the student to close or refresh their browser then try again</p>
@@ -1017,24 +1010,20 @@
     <li>Let the student know they need to wait 5 minutes for the reboot to complete</li>
     <li>If the status is “Available”, assign a new workspace</li>
   </ul>
-
   <h3>AWS is a black screen</h3>
   <p>Immediately reboot the workspace. If error persists, assign a new workspace.</p>
-
   <h3>“The Workspace is Very Slow / I can’t click or type / The screen is frozen”</h3>
   <p>This might be caused by connectivity issues on the student’s side.</p>
   <p>If at VA Facility, ensure they are NOT on the guest network & recommend obtaining a secondary device. If at home network, ensure they are NOT on VPN & recommend closing all tabs/other windows.</p>
   <p>Ask student to refresh their browser and clear cache/cookies</p>
   <p>Reboot the workspace</p>
   <p>If issue persists, assign a new workspace</p>
-
   <h3>It Looks Weird / MISC Errors</h3>
   <p>If their screen looks like below, they logged into the Amazon Workspace App and crashed their actual workspace. You'll need either have them close all those Amazon Workspace windows or do it yourself via the AWS App</p>
   <img src="Moderation/AWS_1.7.png" style="max-width: 100%;">
   <p>“It keeps kicking me out”. This is vague and could be caused by several things like slow connection, someone else logging into the workspace, etc. Ask the student to share screen to troubleshoot further</p>
   <p>ERR_SIG_TIMEOUT is another connection error. If at VA Facility, ensure they are NOT on the guest network & recommend obtaining a secondary device. If at home network, ensure they are NOT on VPN & recommend closing all tabs/other windows.</p>
 </section>
-
   </main>
   <script>
     function filterLabs() {
@@ -1048,7 +1037,6 @@
         }
       });
     }
-
     const themeToggle = document.getElementById('theme-toggle');
     themeToggle.addEventListener('change', () => {
       if (themeToggle.checked) {
